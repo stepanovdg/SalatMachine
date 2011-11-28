@@ -49,7 +49,7 @@ public class ControllerServlet extends HttpServlet {
         PrintWriter out = response.getWriter();
         out.println("<html><head>");
         out.println("<h2>URL:this is i </h2>");
-        //response.sendRedirect(response.encodeRedirectURL("/index.jsp"));
+        response.sendRedirect(response.encodeRedirectURL("/index.jsp"));
        /* out.println("<title>Отображение на сервлет всех запросов к web-приложению</title></head><body>");
         out.println("<h2>URL запроса:");
 

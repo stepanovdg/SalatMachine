@@ -71,6 +71,7 @@ public class ControllerServlet extends HttpServlet {
         try {
 //определение команды, пришедшей из JSP
             Command command = requestHelper.getCommand(request);
+            request.setCharacterEncoding("UTF-8");
 /*вызов реализованного метода execute() интерфейса Command и передача
 параметров классу-обработчику конкретной команды*/
             page = command.execute(request, response);

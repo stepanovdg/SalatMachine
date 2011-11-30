@@ -6,6 +6,19 @@
   <component name="EntryPointsManager">
     <entry_points version="2.0" />
   </component>
+  <component name="FacetAutodetectingManager">
+    <autodetection-disabled>
+      <facet-type id="web">
+        <modules>
+          <module name="SalatMachine">
+            <files>
+              <file url="file://$PROJECT_DIR$/web/WEB-INF/web.xml" />
+            </files>
+          </module>
+        </modules>
+      </facet-type>
+    </autodetection-disabled>
+  </component>
   <component name="IdProvider" IDEtalkID="1CA33DAAEAAFBF3CF4FE16847B8C1346" />
   <component name="JavadocGenerationManager">
     <option name="OUTPUT_DIRECTORY" />
@@ -30,7 +43,7 @@
   <component name="ProjectResources">
     <default-html-doctype>http://www.w3.org/1999/xhtml</default-html-doctype>
   </component>
-  <component name="ProjectRootManager" version="2" languageLevel="JDK_1_5" assert-keyword="true" jdk-15="true" project-jdk-name="1.7" project-jdk-type="JavaSDK">
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_1_8" assert-keyword="true" jdk-15="true" project-jdk-name="1.7" project-jdk-type="JavaSDK">
     <output url="file://$PROJECT_DIR$/out" />
   </component>
   <component name="WebServicesPlugin" addRequiredLibraries="true" />

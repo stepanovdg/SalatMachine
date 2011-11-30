@@ -1,5 +1,6 @@
 <%@ page language="java" contentType="text/html;
         charset=ISO-8859-1" pageEncoding="ISO-8859-1"%>
+<%@ taglib uri="http://controller.salatmachine.bsu.by" prefix="csbb" %>
 <html>
 <head><title>Login</title></head>
 <body><h3>Login</h3>
@@ -15,5 +16,9 @@
     <input type="submit" value="Enter">
 </form>
 <hr/>
+<cbck:log level="debug">
+Debug message from logger.jsp
+</cbck:log>
+
 </body>
 </html>

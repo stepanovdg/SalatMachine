@@ -19,7 +19,7 @@
       </configuration>
     </facet>
   </component>
-  <component name="NewModuleRootManager" inherit-compiler-output="true">
+  <component name="NewModuleRootManager" LANGUAGE_LEVEL="JDK_1_8" inherit-compiler-output="true">
     <exclude-output />
     <content url="file://$MODULE_DIR$">
       <sourceFolder url="file://$MODULE_DIR$/src" isTestSource="false" />
@@ -40,6 +40,15 @@
       <library>
         <CLASSES>
           <root url="jar://$MODULE_DIR$/../../../Универ/II к. - Прикладное программирование Java/DVD11/Software/Java Technology/JSTL/standard-1.1.2.jar!/" />
+        </CLASSES>
+        <JAVADOC />
+        <SOURCES />
+      </library>
+    </orderEntry>
+    <orderEntry type="module-library" exported="">
+      <library>
+        <CLASSES>
+          <root url="jar://C:/Program Files/Java/jdk1.7.0/lib/log4j-1.2.15.jar!/" />
         </CLASSES>
         <JAVADOC />
         <SOURCES />

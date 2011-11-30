@@ -6,6 +6,6 @@ charset=Utf-8" />
 <hr />
 <c:out value="${user}, Hello!"/>
 <hr />
-<a href="controller">Return to login page</a>
+<a href="/controller">Return to login page</a>
 </body></html>
 </jsp:root>

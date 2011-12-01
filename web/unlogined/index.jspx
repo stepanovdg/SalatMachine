@@ -5,7 +5,11 @@ version="2.0">
 <html><head><title>Index JSP</title></head>
 
 <body>
+<!-- Подключить заголовок страницы -->
+<jsp:include page="/static/header.jsp"/>
+
 <!--jsp:output>uhty</jsp:output-->
 <a href="/controller">Main Controller</a>
+<jsp:include page="/static/footer.jsp"/>
 </body></html>
 </jsp:root>

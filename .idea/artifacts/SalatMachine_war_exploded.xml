@@ -11,8 +11,10 @@
           <element id="file-copy" path="$PROJECT_DIR$/../../../Универ/II к. - Прикладное программирование Java/DVD11/Software/Java Technology/JSTL/jstl-1.1.2.jar" />
           <element id="file-copy" path="$PROJECT_DIR$/../../../Универ/II к. - Прикладное программирование Java/DVD11/Software/Java Technology/JSTL/standard-1.1.2.jar" />
           <element id="file-copy" path="C:/Program Files/Java/jdk1.7.0/lib/log4j-1.2.15.jar" />
+          <element id="file-copy" path="C:/MySQL Datafiles/mysql-connector-java-5.1.16-bin.jar" />
         </element>
       </element>
+      <element id="javaee-facet-resources" facet="SalatMachine/javaeeApplication/javaEEApplication" />
     </root>
   </artifact>
 </component>

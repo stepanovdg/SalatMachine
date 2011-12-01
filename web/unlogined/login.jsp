@@ -1,9 +1,11 @@
 <%@ page language="java" contentType="text/html;
         charset=ISO-8859-1" pageEncoding="ISO-8859-1"%>
-<%@ taglib uri="http://controller.salatmachine.bsu.by" prefix="csbb" %>
+<!--%@ taglib prefix="cbck" uri="controller.salatmachine.bsu.by.tags" %-->
 <html>
 <head><title>Login</title></head>
-<body><h3>Login</h3>
+<body>
+<jsp:include page="/static/header.jsp"/>
+<h3>Login</h3>
 <hr/>
 <form name="loginForm" method="POST"
       action="controller">
@@ -16,9 +18,9 @@
     <input type="submit" value="Enter">
 </form>
 <hr/>
-<cbck:log level="debug">
+<!--cbck:log level="debug">
 Debug message from logger.jsp
-</cbck:log>
-
+<!/cbck:log-->
+<jsp:include page="/static/footer.jsp"/>
 </body>
 </html>

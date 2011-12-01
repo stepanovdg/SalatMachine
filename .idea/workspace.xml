@@ -15,13 +15,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="f663f5a5-2236-4621-b052-f5f37073d521" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.classpath" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.project" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/SalatMachine.eml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/misc.xml" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/SalatMachine.iml" afterPath="$PROJECT_DIR$/SalatMachine.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/by/bsu/salatmachine/model/registration/RegistrationBean.java" afterPath="$PROJECT_DIR$/src/by/bsu/salatmachine/model/registration/RegistrationBean.java" />
     </list>
     <ignored path="SalatMachine.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -109,13 +103,13 @@
       </file>
       <file leaf-file-name="config.properties" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/by/bsu/salatmachine/controller/manager/config.properties">
+          <provider editor-type-id="ResourceBundle">
+            <state />
+          </provider>
           <provider selected="true" editor-type-id="text-editor">
             <state line="5" column="16" selection-start="221" selection-end="221" vertical-scroll-proportion="0.0">
               <folding />
             </state>
-          </provider>
-          <provider editor-type-id="ResourceBundle">
-            <state />
           </provider>
         </entry>
       </file>
@@ -139,11 +133,8 @@
       </file>
       <file leaf-file-name="application.xml" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/META-INF/application.xml">
-          <provider editor-type-id="com.intellij.javaee.module.view.app.viewlets.ApplicationModuleGeneralEditorProvider">
-            <state />
-          </provider>
           <provider selected="true" editor-type-id="text-editor">
-            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="-0.0">
+            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -178,19 +169,10 @@
       </file>
       <file leaf-file-name="web.xml" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/web/WEB-INF/web.xml">
-          <provider editor-type-id="com.intellij.javaee.module.view.web.viewlets.WebModuleAssemblyDescriptorProvider">
-            <state />
-          </provider>
-          <provider editor-type-id="com.intellij.javaee.module.view.web.viewlets.WebModuleGeneralEditorProvider">
-            <state />
-          </provider>
           <provider selected="true" editor-type-id="text-editor">
-            <state line="31" column="7" selection-start="1250" selection-end="1250" vertical-scroll-proportion="0.06967213">
+            <state line="31" column="7" selection-start="1250" selection-end="1250" vertical-scroll-proportion="0.06439394">
               <folding />
             </state>
-          </provider>
-          <provider editor-type-id="com.intellij.javaee.module.view.web.viewlets.WebModuleAssemblyDescriptorReferencesProvider">
-            <state />
           </provider>
         </entry>
       </file>
@@ -212,8 +194,8 @@
     <option name="UPDATE_CHANGES_POLICY" value="STASH" />
   </component>
   <component name="HighlightingSettingsPerFile">
-    <setting file="file://$PROJECT_DIR$/src/by/bsu/salatmachine/model/registration/RegistrationBean.java" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/src/by/bsu/salatmachine/controller/ControllerServlet.java" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/src/by/bsu/salatmachine/model/registration/RegistrationBean.java" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
@@ -514,8 +496,6 @@
           </PATH>
         </subPane>
       </pane>
-      <pane id="Scope" />
-      <pane id="Favorites" />
       <pane id="PackagesPane">
         <subPane>
           <PATH>
@@ -566,17 +546,19 @@
           </PATH>
         </subPane>
       </pane>
+      <pane id="Favorites" />
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="project.structure.last.edited" value="Modules" />
     <property name="JdbcConsole.Extract.Separator" value=";" />
-    <property name="OverrideImplement.combined" value="true" />
     <property name="project.structure.proportion" value="0.15" />
+    <property name="OverrideImplement.combined" value="true" />
     <property name="options.splitter.main.proportions" value="0.3" />
     <property name="JdbcConsole.Connection.Autocommit" value="true" />
-    <property name="MemberChooser.sorted" value="false" />
     <property name="recentsLimit" value="5" />
+    <property name="MemberChooser.sorted" value="false" />
     <property name="JdbcConsole.ResultInNewTab" value="true" />
     <property name="Database.TableEditor.Splitter" value="0.9" />
     <property name="GoToClass.toSaveIncludeLibraries" value="false" />
@@ -596,8 +578,8 @@
     <property name="JdbcConsole.EnableParameterPattern" value="false" />
     <property name="JdbcConsole.ParameterPattern" value="(\?\d*|\:\w+|\@\w+|\$\{[^$\{\}]*\}|\$\w+\$|\#\w+\#)" />
     <property name="JdbcConsole.ResultPageSize" value="1000" />
-    <property name="dynamic.classpath" value="false" />
     <property name="options.searchVisible" value="true" />
+    <property name="dynamic.classpath" value="false" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
@@ -716,14 +698,10 @@
         <option name="PhingTarget" enabled="false" />
       </method>
     </configuration>
-    <configuration default="true" type="#com.intellij.j2ee.web.tomcat.TomcatRunConfigurationFactory" factoryName="Local">
-      <deployment />
-      <server-settings>
-        <option name="DEPLOY_TOMCAT_APPS" value="false" />
-        <option name="BASE_DIRECTORY_NAME" value="" />
-      </server-settings>
-      <predefined_log_file id="TOMCAT_LOCALHOST_LOG_ID" enabled="true" />
-      <extension name="coverage" enabled="false" merge="false" />
+    <configuration default="true" type="com.intellij.persistence.run.ConsoleRunConfigurationType" factoryName="Query Language Console">
+      <option name="VM_PARAMETERS" value="" />
+      <option name="USER_CFG_CLASS" />
+      <option name="CONTEXT_PROVIDER" />
       <method>
         <option name="AntTarget" enabled="false" />
         <option name="BuildArtifacts" enabled="false" />
@@ -732,10 +710,14 @@
         <option name="PhingTarget" enabled="false" />
       </method>
     </configuration>
-    <configuration default="true" type="com.intellij.persistence.run.ConsoleRunConfigurationType" factoryName="Query Language Console">
-      <option name="VM_PARAMETERS" value="" />
-      <option name="USER_CFG_CLASS" />
-      <option name="CONTEXT_PROVIDER" />
+    <configuration default="true" type="#com.intellij.j2ee.web.tomcat.TomcatRunConfigurationFactory" factoryName="Local">
+      <deployment />
+      <server-settings>
+        <option name="DEPLOY_TOMCAT_APPS" value="false" />
+        <option name="BASE_DIRECTORY_NAME" value="" />
+      </server-settings>
+      <predefined_log_file id="TOMCAT_LOCALHOST_LOG_ID" enabled="true" />
+      <extension name="coverage" enabled="false" merge="false" />
       <method>
         <option name="AntTarget" enabled="false" />
         <option name="BuildArtifacts" enabled="false" />
@@ -873,7 +855,6 @@
       <window_info id="IDEtalk Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="IDEtalk" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3283582" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3283582" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3283582" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Web" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32902735" sideWeight="0.33996683" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32902735" sideWeight="0.3233831" order="1" side_tool="true" content_ui="tabs" />
@@ -889,6 +870,7 @@
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3283582" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3283582" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
@@ -1036,16 +1018,29 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/by/bsu/salatmachine/controller/manager/config.properties">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="5" column="16" selection-start="221" selection-end="221" vertical-scroll-proportion="0.0" />
-      </provider>
       <provider editor-type-id="ResourceBundle">
         <state />
+      </provider>
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="5" column="16" selection-start="221" selection-end="221" vertical-scroll-proportion="0.0" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/by/bsu/salatmachine/model/pool/JDCConnectionDriver.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="36" column="39" selection-start="1085" selection-end="1085" vertical-scroll-proportion="0.0" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/by/bsu/salatmachine/model/pool/JDCConnectionPool.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="99" column="31" selection-start="2497" selection-end="2497" vertical-scroll-proportion="0.0" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/META-INF/application.xml">
+      <provider editor-type-id="com.intellij.javaee.module.view.app.viewlets.ApplicationModuleGeneralEditorProvider">
+        <state />
+      </provider>
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/by/bsu/salatmachine/model/pool/JDCConnection.java">
@@ -1055,48 +1050,27 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/by/bsu/salatmachine/model/registration/RegistrationBean.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="11" column="35" selection-start="177" selection-end="177" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
+        <state line="11" column="35" selection-start="177" selection-end="177" vertical-scroll-proportion="0.0" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/.idea/copyright/profiles_settings.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/by/bsu/salatmachine/model/pool/JDCConnectionPool.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="99" column="31" selection-start="2497" selection-end="2497" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/META-INF/application.xml">
-      <provider editor-type-id="com.intellij.javaee.module.view.app.viewlets.ApplicationModuleGeneralEditorProvider">
-        <state />
-      </provider>
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/web/WEB-INF/web.xml">
-      <provider editor-type-id="com.intellij.javaee.module.view.web.viewlets.WebModuleAssemblyDescriptorProvider">
+      <provider editor-type-id="com.intellij.javaee.module.view.web.viewlets.WebModuleAssemblyDescriptorReferencesProvider">
         <state />
       </provider>
       <provider editor-type-id="com.intellij.javaee.module.view.web.viewlets.WebModuleGeneralEditorProvider">
         <state />
       </provider>
       <provider selected="true" editor-type-id="text-editor">
-        <state line="31" column="7" selection-start="1250" selection-end="1250" vertical-scroll-proportion="0.06967213">
+        <state line="31" column="7" selection-start="1250" selection-end="1250" vertical-scroll-proportion="0.06439394">
           <folding />
         </state>
       </provider>
-      <provider editor-type-id="com.intellij.javaee.module.view.web.viewlets.WebModuleAssemblyDescriptorReferencesProvider">
+      <provider editor-type-id="com.intellij.javaee.module.view.web.viewlets.WebModuleAssemblyDescriptorProvider">
         <state />
       </provider>
     </entry>

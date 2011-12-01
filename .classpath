@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
+	<classpathentry kind="src" path="src"/>
+	<classpathentry exported="true" kind="con" path="org.eclipse.jdt.USER_LIBRARY/Tomcat 7"/>
+	<classpathentry exported="true" kind="lib" path="C:/Users/Дмитрий/Documents/Универ/II к. - Прикладное программирование Java/DVD11/Software/Java Technology/JSTL/jstl-1.1.2.jar"/>
+	<classpathentry exported="true" kind="lib" path="C:/Users/Дмитрий/Documents/Универ/II к. - Прикладное программирование Java/DVD11/Software/Java Technology/JSTL/standard-1.1.2.jar"/>
+	<classpathentry exported="true" kind="lib" path="C:/Program Files/Java/jdk1.7.0/lib/log4j-1.2.15.jar"/>
+	<classpathentry exported="true" kind="lib" path="C:/MySQL Datafiles/mysql-connector-java-5.1.16-bin.jar"/>
+	<classpathentry exported="true" kind="con" path="org.eclipse.jdt.USER_LIBRARY/Java EE 6"/>
+	<classpathentry kind="output" path="out/production/SalatMachine"/>
+</classpath>

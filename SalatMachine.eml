@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<component LANGUAGE_LEVEL="JDK_1_8" inherit-compiler-output="true">
+	<output-test url="file://$MODULE_DIR$/out/test/SalatMachine"/>
+	<exclude-output/>
+	<contentEntry url="file://$MODULE_DIR$"/>
+	<lib name="Tomcat 7" scope="PROVIDED"/>
+</component>

@@ -8,13 +8,6 @@
   </component>
   <component name="FacetAutodetectingManager">
     <autodetection-disabled>
-      <facet-type id="BeanValidation">
-        <modules>
-          <module name="SalatMachine" />
-          <module name="SalatMachine" />
-          <module name="SalatMachine" />
-        </modules>
-      </facet-type>
       <facet-type id="web">
         <modules>
           <module name="SalatMachine">

@@ -8,23 +8,9 @@ package by.bsu.salatmachine.model.registration;
  *
  */
 
-import by.bsu.salatmachine.model.pool.JDCConnectionDriver;
-
-import javax.ejb.RemoveException;
-import javax.ejb.CreateException;
-import javax.ejb.FinderException;
-import javax.ejb.*;
-import java.util.*;
-import java.text.NumberFormat;
-import java.sql.*;
-import java.rmi.RemoteException;
-import java.sql.*;
-import java.rmi.*;
-import javax.ejb.*;
-
 // uses our connection pool
 
-public class RegistrationBean implements EntityBean {
+public class RegistrationBean  {/*
 
     protected transient EntityContext ctx;
     public String theuser, password, creditcard, emailaddress;
@@ -221,5 +207,5 @@ public class RegistrationBean implements EntityBean {
             }
         }
     }
-
+                         */
 }

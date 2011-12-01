@@ -5,7 +5,7 @@
 		  http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd"
          version="2.5">
     <welcome-file-list>
-        <welcome-file>/unlogined/index.jspx</welcome-file>
+        <welcome-file>/view/unlogined/index.jspx</welcome-file>
     </welcome-file-list>
     <security-role>
         <description>fur secure section</description>
@@ -28,7 +28,7 @@
     <security-constraint>
         <web-resource-collection>
             <web-resource-name>secure</web-resource-name>
-            <url-pattern>/secure/*</url-pattern>
+            <url-pattern>/view/secure/*</url-pattern>
             <http-method>GET</http-method>
             <http-method>POST</http-method>
         </web-resource-collection>
@@ -39,7 +39,7 @@
     <security-constraint>
         <web-resource-collection>
             <web-resource-name>furUsers</web-resource-name>
-            <url-pattern>/logined/*</url-pattern>
+            <url-pattern>/view/logined/*</url-pattern>
             <http-method>GET</http-method>
             <http-method>POST</http-method>
         </web-resource-collection>
@@ -53,7 +53,7 @@
     <security-constraint>
         <web-resource-collection>
             <web-resource-name>furGuests</web-resource-name>
-            <url-pattern>/unlogined/*</url-pattern>
+            <url-pattern>/view/unlogined/*</url-pattern>
             <http-method>GET</http-method>
             <http-method>POST</http-method>
         </web-resource-collection>
@@ -61,26 +61,17 @@
             <transport-guarantee>NONE</transport-guarantee>
         </user-data-constraint>
     </security-constraint>
-    <!--jsp-config>
-        <taglib>
-            <taglib-uri>http://java.sun.com/jsp/jstl/core</taglib-uri>
-            <taglib-location>/WEB-INF/tlds/c.tld</taglib-location>
-        </taglib>
-        <taglib>
-            <taglib-uri>http://java.sun.com/jsp/jstl/fmt</taglib-uri>
-            <taglib-location>/WEB-INF/tlds/fmt.tld</taglib-location>
-        </taglib>
-        <taglib>
-            <taglib-uri>http://java.sun.com/jsp/jstl/functions</taglib-uri>
-            <taglib-location>/WEB-INF/tlds/fn.tld</taglib-location>
-        </taglib>
-        <taglib>
-            <taglib-uri>http://java.sun.com/jsp/jstl/sql</taglib-uri>
-            <taglib-location>/WEB-INF/tlds/sql.tld</taglib-location>
-        </taglib>
-        <taglib>
-            <taglib-uri>http://java.sun.com/jsp/jstl/xml</taglib-uri>
-            <taglib-location>/WEB-INF/tlds/x.tld</taglib-location>
-        </taglib>
-    </jsp-config-->
+    <error-page>
+            <error-code>500</error-code>
+            <location>/view/unlogined/error.jspx</location>
+        </error-page>
+    <error-page>
+            <error-code>404</error-code>
+            <location>/view/unlogined/error.jspx</location>
+        </error-page>
+        <error-page>
+            <exception-type>java.lang.Throwable</exception-type>
+            <location>/view/unlogined/error.jspx</location>
+        </error-page>
+
 </web-app>

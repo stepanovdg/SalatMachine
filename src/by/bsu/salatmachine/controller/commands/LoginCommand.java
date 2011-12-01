@@ -24,16 +24,17 @@ public class LoginCommand implements Command {
                           HttpServletResponse response)
             throws ServletException, IOException {
         String page = null;
-//извлечение из запроса логина и пароля
+        //извлечение из запроса логина и пароля
         String login = request.getParameter(PARAM_NAME_LOGIN);
         String pass = request.getParameter(PARAM_NAME_PASSWORD);
-//проверка логина и пароля
+        //проверка логина и пароля
         if (LoginLogic.checkLogin(login, pass)) {
             request.setAttribute("user", login);
-//определение пути к main.jsp
+            //определение пути к main.jsp
             page = ConfigurationManager.getInstance()
                     .getProperty(ConfigurationManager.MAIN_PAGE_PATH);
-        } else {
+
+            } else {
             request.setAttribute("errorMessage",
                     MessageManager.getInstance()
                             .getProperty(MessageManager.LOGIN_ERROR_MESSAGE));

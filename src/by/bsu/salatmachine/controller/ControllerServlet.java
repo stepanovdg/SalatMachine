@@ -1,6 +1,6 @@
 package by.bsu.salatmachine.controller;
 
-import by.bsu.salatmachine.controller.commands.Command;
+import by.bsu.salatmachine.model.commands.Command;
 import by.bsu.salatmachine.controller.manager.ConfigurationManager;
 import by.bsu.salatmachine.controller.manager.MessageManager;
 

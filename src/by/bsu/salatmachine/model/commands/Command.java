@@ -1,4 +1,4 @@
-package by.bsu.salatmachine.controller.commands;
+package by.bsu.salatmachine.model.commands;
 
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServletRequest;

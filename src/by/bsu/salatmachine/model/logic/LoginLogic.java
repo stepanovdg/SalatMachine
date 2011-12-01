@@ -1,4 +1,4 @@
-package by.bsu.salatmachine.controller.logic;
+package by.bsu.salatmachine.model.logic;
 
 import by.bsu.salatmachine.controller.manager.ConfigurationManager;
 

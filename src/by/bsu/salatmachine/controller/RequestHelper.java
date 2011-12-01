@@ -1,8 +1,8 @@
 package by.bsu.salatmachine.controller;
 
-import by.bsu.salatmachine.controller.commands.Command;
-import by.bsu.salatmachine.controller.commands.LoginCommand;
-import by.bsu.salatmachine.controller.commands.NoCommand;
+import by.bsu.salatmachine.model.commands.Command;
+import by.bsu.salatmachine.model.commands.LoginCommand;
+import by.bsu.salatmachine.model.commands.NoCommand;
 
 import javax.servlet.http.HttpServletRequest;
 import java.util.HashMap;

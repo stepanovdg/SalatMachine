@@ -7,13 +7,19 @@ package by.bsu.salatmachine.model.entity;
  * Time: 15:16
  *
  */
-public class User {
+public class User  {
     private String login,password;
     private Integer money;
     private boolean type;
 
     public boolean isType() {
         return type;
+    }
+    public String getType() {
+        if (type){
+            return "Admin";
+        }else
+        return "User";
     }
 
     public void setType(boolean type) {

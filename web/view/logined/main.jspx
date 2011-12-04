@@ -6,7 +6,7 @@ charset=Utf-8" />
 <jsp:include page="/view/static/header.jsp"/>
 <h3>Welcome</h3>
 <hr />
-<c:out value="${user}, Hello!"/>
+<c:out value="${user.getLogin()}, Hello!"/>
 <hr />
 <a href="/controller">Return to login page</a>
 <jsp:include page="/view/static/footer.jsp"/>

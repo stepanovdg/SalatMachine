@@ -1,5 +1,6 @@
 package by.bsu.salatmachine.model.commands;
 
+import by.bsu.salatmachine.model.entity.User;
 import by.bsu.salatmachine.model.logic.LoginLogic;
 import by.bsu.salatmachine.controller.manager.ConfigurationManager;
 import by.bsu.salatmachine.controller.manager.MessageManager;
@@ -8,6 +9,7 @@ import javax.servlet.ServletException;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
+import java.rmi.RemoteException;
 
 /**
  * Created by IntelliJ IDEA.
@@ -17,8 +19,7 @@ import java.io.IOException;
  */
 public class LoginCommand implements Command {
     private static final String PARAM_NAME_LOGIN = "login";
-    private static final String PARAM_NAME_PASSWORD
-            = "password";
+    private static final String PARAM_NAME_PASSWORD = "password";
 
     public String execute(HttpServletRequest request,
                           HttpServletResponse response)
@@ -28,18 +29,22 @@ public class LoginCommand implements Command {
         String login = request.getParameter(PARAM_NAME_LOGIN);
         String pass = request.getParameter(PARAM_NAME_PASSWORD);
         //проверка логина и пароля
-        if (LoginLogic.checkLogin(login, pass)) {
-            request.setAttribute("user", login);
-            //определение пути к main.jsp
-            page = ConfigurationManager.getInstance()
-                    .getProperty(ConfigurationManager.MAIN_PAGE_PATH);
+        try {
+           User user = LoginLogic.getLogin(login, pass);
+                request.setAttribute("user",user);
 
-            } else {
+                page = ConfigurationManager.getInstance()
+                        .getProperty(ConfigurationManager.MAIN_PAGE_PATH);
+
+
+
+
+        } catch (RemoteException e) {
             request.setAttribute("errorMessage",
-                    MessageManager.getInstance()
-                            .getProperty(MessageManager.LOGIN_ERROR_MESSAGE));
-            page = ConfigurationManager.getInstance()
-                    .getProperty(ConfigurationManager.ERROR_PAGE_PATH);
+                        MessageManager.getInstance()
+                                .getProperty(MessageManager.LOGIN_ERROR_MESSAGE));
+                page = ConfigurationManager.getInstance()
+                        .getProperty(ConfigurationManager.ERROR_PAGE_PATH);
         }
         return page;
     }

@@ -19,7 +19,7 @@ import java.sql.SQLException;
  */
 public class LoginLogic {
     public static User getLogin(
-            String login, String password) throws FinderException {
+            String login, String password) throws  RemoteException {
         User user = null;
         // проверка логина и пароля
         try {
@@ -36,7 +36,7 @@ public class LoginLogic {
                         user.setMoney(rs.getInt(3));
                         user.setType(rs.getBoolean(4));
                     } else {
-                        throw new FinderException("Refresh: Registration ("
+                        throw new RemoteException("Refresh: Registration ("
                                 + login + ") not found");
                     }
                 }
@@ -50,7 +50,7 @@ public class LoginLogic {
                 }
             }
         } catch (SQLException e) {
-            e.printStackTrace();
+            throw new RemoteException(e.getMessage());
         }
         return user;
 

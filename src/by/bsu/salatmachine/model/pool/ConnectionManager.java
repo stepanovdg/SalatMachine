@@ -2,7 +2,6 @@ package by.bsu.salatmachine.model.pool;
 
 import by.bsu.salatmachine.controller.manager.ConfigurationManager;
 
-import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.SQLException;
 
@@ -14,13 +13,14 @@ import java.sql.SQLException;
  *
  */
 public class ConnectionManager {
-    public static Connection getConnection(){
+    public static JDCConnection getConnection(){
           try {
             //организация простейшего соединения с базой данных
             String driver = ConfigurationManager.getInstance()
                     .getProperty(ConfigurationManager.DATABASE_DRIVER_NAME);
             String url = ConfigurationManager.getInstance()
                         .getProperty(ConfigurationManager.DATABASE_URL);
+                       // .getProperty(ConfigurationManager.DATABASE_CONNECTION);
             String user = ConfigurationManager.getInstance()
                         .getProperty(ConfigurationManager.DATABASE_USER);
             String pass = ConfigurationManager.getInstance()
@@ -28,7 +28,7 @@ public class ConnectionManager {
             String con = ConfigurationManager.getInstance()
                         .getProperty(ConfigurationManager.DATABASE_CONNECTION);
             new JDCConnectionDriver(driver,url,user,pass);
-            return DriverManager.getConnection(con);
+            return (JDCConnection) DriverManager.getConnection(con);
     } catch (ClassNotFoundException e) {
               e.printStackTrace();  //todo To change body of catch statement use File | Settings | File Templates.
           } catch (SQLException e) {

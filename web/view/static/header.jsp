@@ -55,6 +55,6 @@ EpamWebProject "SalatMachine" v.1.0.0</div>
 	<div style="background-color: #ccc; padding: 5px">
 	<div style="float: right; margin-right: 5px">[ <a
 		href="<c:url value="/controller" />">Logout</a> ]</div>
-	You login as <c:out value="${user}" /> ( <c:out
-		value="${user}" /> )</div>
+	You login as <c:out value="${user.getLogin()}" /> ( <c:out
+		value="${user.getType()}" /> )</div>
 </c:if>

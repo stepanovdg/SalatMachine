@@ -90,6 +90,7 @@ public class ControllerServlet extends HttpServlet {
         }
 //вызов страницы ответа на запрос
         RequestDispatcher dispatcher = getServletContext().getRequestDispatcher(page);
+      //todo add user to ssesion  getServletConfig().getServletContext().
         dispatcher.forward(request, response);
     }
 

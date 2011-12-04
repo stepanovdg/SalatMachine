@@ -1,8 +1,8 @@
 package by.bsu.salatmachine.controller;
 
-import by.bsu.salatmachine.model.commands.Command;
 import by.bsu.salatmachine.controller.manager.ConfigurationManager;
 import by.bsu.salatmachine.controller.manager.MessageManager;
+import by.bsu.salatmachine.model.commands.Command;
 
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;

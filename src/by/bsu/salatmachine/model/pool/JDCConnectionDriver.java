@@ -7,6 +7,8 @@ package by.bsu.salatmachine.model.pool;
  * Time: 12:44
  *
  */
+import by.bsu.salatmachine.controller.manager.ConfigurationManager;
+
 import java.sql.*;
 import java.util.*;
 import java.util.logging.Logger;
@@ -14,7 +16,7 @@ import java.util.logging.Logger;
 
 public class JDCConnectionDriver implements Driver {
 
-    public static final String URL_PREFIX = "jdbc:jdc:";
+    public static final String URL_PREFIX = ConfigurationManager.getInstance().getProperty(ConfigurationManager.DATABASE_URL_PREFIX);
     private static final int MAJOR_VERSION = 1;
     private static final int MINOR_VERSION = 0;
     private JDCConnectionPool pool;

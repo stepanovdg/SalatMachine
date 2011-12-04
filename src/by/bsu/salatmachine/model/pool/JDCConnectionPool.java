@@ -31,7 +31,7 @@ class ConnectionReaper extends Thread {
 
 public class JDCConnectionPool {
 
-   private Vector connections;
+   private Vector<JDCConnection> connections;
    private String url, user, password;
    final private long timeout=60000;
    private ConnectionReaper reaper;
@@ -41,7 +41,7 @@ public class JDCConnectionPool {
       this.url = url;
       this.user = user;
       this.password = password;
-      connections = new Vector(poolsize);
+      connections = new Vector<JDCConnection>(poolsize);
       reaper = new ConnectionReaper(this);
       reaper.start();
    }
@@ -49,10 +49,10 @@ public class JDCConnectionPool {
    public synchronized void reapConnections() {
 
       long stale = System.currentTimeMillis() - timeout;
-      Enumeration connlist = connections.elements();
+      Enumeration<JDCConnection> connlist = connections.elements();
 
       while((connlist != null) && (connlist.hasMoreElements())) {
-          JDCConnection conn = (JDCConnection)connlist.nextElement();
+          JDCConnection conn = connlist.nextElement();
 
           if((conn.inUse()) && (stale >conn.getLastUse()) &&
                                             (!conn.validate())) {
@@ -63,10 +63,10 @@ public class JDCConnectionPool {
 
    public synchronized void closeConnections() {
 
-      Enumeration connlist = connections.elements();
+      Enumeration<JDCConnection> connlist = connections.elements();
 
       while((connlist != null) && (connlist.hasMoreElements())) {
-          JDCConnection conn = (JDCConnection)connlist.nextElement();
+          JDCConnection conn = connlist.nextElement();
           removeConnection(conn);
       }
    }
@@ -80,7 +80,7 @@ public class JDCConnectionPool {
 
        JDCConnection c;
        for(int i = 0; i < connections.size(); i++) {
-           c = (JDCConnection)connections.elementAt(i);
+           c = connections.elementAt(i);
            if (c.lease()) {
               return c;
            }

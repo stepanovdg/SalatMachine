@@ -17,16 +17,16 @@ public class ConnectionManager {
           try {
             //организация простейшего соединения с базой данных
             String driver = ConfigurationManager.getInstance()
-                    .getProperty(ConfigurationManager.DATABASE_DRIVER_NAME);
+                    .getProperty("DATABASE_DRIVER_NAME");
             String url = ConfigurationManager.getInstance()
-                        .getProperty(ConfigurationManager.DATABASE_URL);
+                        .getProperty("DATABASE_URL");
                        // .getProperty(ConfigurationManager.DATABASE_CONNECTION);
             String user = ConfigurationManager.getInstance()
-                        .getProperty(ConfigurationManager.DATABASE_USER);
+                        .getProperty("DATABASE_USER");
             String pass = ConfigurationManager.getInstance()
-                        .getProperty(ConfigurationManager.DATABASE_PASSWORD);
+                        .getProperty("DATABASE_PASSWORD");
             String con = ConfigurationManager.getInstance()
-                        .getProperty(ConfigurationManager.DATABASE_CONNECTION);
+                        .getProperty("DATABASE_CONNECTION");
             new JDCConnectionDriver(driver,url,user,pass);
             return (JDCConnection) DriverManager.getConnection(con);
     } catch (ClassNotFoundException e) {

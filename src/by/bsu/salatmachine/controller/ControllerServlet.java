@@ -19,7 +19,7 @@ import java.io.IOException;
  */
 
 public class ControllerServlet extends HttpServlet {
-    RequestHelper requestHelper = RequestHelper.getInstance();
+
 
     public ControllerServlet() {
         super();
@@ -31,6 +31,7 @@ public class ControllerServlet extends HttpServlet {
 
     public void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         processRequest(request, response);
+        //response.sendRedirect("/index.jsp");
         /* RequestDispatcher dispatcher = null;
       String param = request.getParameter("go");
 
@@ -70,26 +71,27 @@ public class ControllerServlet extends HttpServlet {
         String page;
         try {
 //определение команды, пришедшей из JSP
-            Command command = requestHelper.getCommand(request);
+            Command command = RequestHelper.getInstance().getCommand(request);
             request.setCharacterEncoding("UTF-8");
 /*вызов реализованного метода execute() интерфейса Command и передача
 параметров классу-обработчику конкретной команды*/
             page = command.execute(request, response);
 // метод возвращает страницу ответа
         } catch (ServletException e) {
-            e.printStackTrace();
+            e.printStackTrace();   //todo убрать catches
 //генерация сообщения об ошибке
-            request.setAttribute("errorMessage", MessageManager.getInstance().getProperty(MessageManager.SERVLET_EXCEPTION_ERROR_MESSAGE));
+            request.setAttribute("errorMessage", MessageManager.getInstance().getProperty("SERVLET_EXCEPTION_ERROR_MESSAGE"));
 //вызов JSP-страницы c cообщением об ошибке
-            page = ConfigurationManager.getInstance().getProperty(ConfigurationManager.ERROR_PAGE_PATH);
+            page = ConfigurationManager.getInstance().getProperty("ERROR_PAGE_PATH");
         } catch (IOException e) {
             e.printStackTrace();
-            request.setAttribute("errorMessage", MessageManager.getInstance().getProperty(MessageManager.IO_EXCEPTION_ERROR_MESSAGE));
+            request.setAttribute("errorMessage", MessageManager.getInstance().getProperty("IO_EXCEPTION_ERROR_MESSAGE"));
             page = ConfigurationManager.getInstance()
-                    .getProperty(ConfigurationManager.ERROR_PAGE_PATH);
+                    .getProperty("ERROR_PAGE_PATH");
         }
 //вызов страницы ответа на запрос
         RequestDispatcher dispatcher = getServletContext().getRequestDispatcher(page);
+        //response.set
       //todo add user to ssesion  getServletConfig().getServletContext().
         dispatcher.forward(request, response);
     }

@@ -7,7 +7,7 @@
     <module id="SalatMachine-Web">
         <web>
             <web-uri>web.war</web-uri>
-            <context-root>SalatMachineWeb</context-root>
+            <context-root>/SalatMachineWeb</context-root>
         </web>
     </module>
 </application>

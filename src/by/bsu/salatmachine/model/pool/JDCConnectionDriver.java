@@ -16,7 +16,7 @@ import java.util.logging.Logger;
 
 public class JDCConnectionDriver implements Driver {
 
-    public static final String URL_PREFIX = ConfigurationManager.getInstance().getProperty(ConfigurationManager.DATABASE_URL_PREFIX);
+    public static final String URL_PREFIX = ConfigurationManager.getInstance().getProperty("DATABASE_URL_PREFIX");
     private static final int MAJOR_VERSION = 1;
     private static final int MINOR_VERSION = 0;
     private JDCConnectionPool pool;
@@ -64,6 +64,6 @@ public class JDCConnectionDriver implements Driver {
 
     @Override
     public Logger getParentLogger() throws SQLFeatureNotSupportedException {
-        return null;  //To change body of implemented methods use File | Settings | File Templates.
+        return null;  //Todo change body of implemented methods use File | Settings | File Templates.
     }
 }

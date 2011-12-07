@@ -5,7 +5,7 @@ package by.bsu.salatmachine.model.registration;
  * User: Stepanov Dmitriy
  * Date: 01.12.11
  * Time: 12:52
- *
+ *              EXAMPLE
  */
 
 // uses our connection pool

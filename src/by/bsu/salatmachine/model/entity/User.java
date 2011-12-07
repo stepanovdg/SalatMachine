@@ -7,7 +7,8 @@ package by.bsu.salatmachine.model.entity;
  * Time: 15:16
  *
  */
-public class User  {
+public class User {
+
     private String login,password;
     private Integer money;
     private boolean type;
@@ -49,4 +50,5 @@ public class User  {
     public void setLogin(String login) {
         this.login = login;
     }
+
 }

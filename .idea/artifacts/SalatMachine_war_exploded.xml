@@ -14,7 +14,6 @@
           <element id="file-copy" path="C:/MySQL Datafiles/mysql-connector-java-5.1.16-bin.jar" />
         </element>
       </element>
-      <element id="javaee-facet-resources" facet="SalatMachine/javaeeApplication/javaEEApplication" />
     </root>
   </artifact>
 </component>

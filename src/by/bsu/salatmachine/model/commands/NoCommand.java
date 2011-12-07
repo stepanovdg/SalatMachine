@@ -1,7 +1,5 @@
 package by.bsu.salatmachine.model.commands;
 
-import by.bsu.salatmachine.controller.manager.ConfigurationManager;
-
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
@@ -22,6 +20,6 @@ public class NoCommand implements Command {
 /*в случае прямого обращения к контроллеру переадресация на страницу ввода
 логина*/
         return getInstance()
-                .getProperty(ConfigurationManager.LOGIN_PAGE_PATH);
+                .getProperty("LOGIN_PAGE_PATH");
     }
 }

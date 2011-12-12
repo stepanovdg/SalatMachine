@@ -1,4 +1,4 @@
-*
+﻿*
 {
 	margin: 0;
 	padding: 0;
@@ -15,10 +15,8 @@ BODY
 	font-size: 11px;
 	line-height: 16px;
 	text-align: center;
-	background-color: #000;
-	background-position: 50% 0;
-	background-repeat: no-repeat;
-	font-family: Tahoma, sans-serif;
+    background: #000 no-repeat 50% 0;
+    font-family: Tahoma, sans-serif;
 }
 A:link, A:visited
 {
@@ -31,7 +29,7 @@ A IMG
 }
 DIV.wrap
 {
-	width: 826px;
+	width: 818px;
 	margin: 0 auto;
 	text-align: left;
 }
@@ -39,7 +37,7 @@ DIV#top DIV#nav
 {
 	float: left;
 	clear: both;
-	width: 800px;
+	width: 818px;
 	height: 52px;
 	margin: 22px 0 0;
 }
@@ -63,33 +61,55 @@ DIV#nav UL LI A
 	line-height: 52px;
 	text-indent: -9999px;
 }
+DIV#language-holder{
+    background: url(/view/images/languages/header-bg1.png) repeat 50%;
+    height: auto;
+    float: none;
+	width: 818px;
+    top: 218px;
+	margin:auto;
+    margin-bottom: 40px;
+
+}
+DIV#language-holder#language-image{
+
+
+}
+DIV#language-holder IMG{
+    height: 30px;
+    float: right;
+    margin-left: 10px;
+    margin-right: 5px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
 DIV#header
 {
 	margin: -1px 0 0;
 }
 DIV#video-header
 {
-	height: 250px;
+	height: 218px;
 	margin: -1px 0 0;
 }
 DIV#header DIV.wrap
 {
-	height: 249px;
+	height: 218px;
 	background: url(/view/images/header-bg1.png) no-repeat 50% 0;
 }
 DIV#header DIV#slide-holder
 {
 	z-index: 41;
-	width: 808px;
-	height: 230px;
+	width: 800px;
+	height: 218px;
 	position: absolute;
 }
 DIV#header DIV#slide-holder DIV#slide-runner
 {
 	top: 9px;
 	left: 9px;
-	width: 808px;
-	height: 230px;
+	width: 800px;
+	height: 218px;
 	overflow: hidden;
 	position: absolute;
 }
@@ -103,7 +123,7 @@ DIV#header DIV#slide-holder DIV#slide-controls
 {
 	left: 0;
 	bottom: 178px;
-	width: 826px;
+	width: 818px;
 	height: 46px;
 	display: none;
 	position: absolute;
@@ -138,8 +158,7 @@ DIV#header DIV#slide-holder DIV#slide-controls P#slide-nav A
 	font-weight: bold;
 	text-align: center;
 	text-decoration: none;
-	background-position: 0 0;
-	background-repeat: no-repeat;
+    background: no-repeat 0 0;
 }
 DIV#header DIV#slide-holder DIV#slide-controls P#slide-nav A.on
 {

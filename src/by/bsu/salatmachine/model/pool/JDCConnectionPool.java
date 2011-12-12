@@ -2,7 +2,7 @@ package by.bsu.salatmachine.model.pool;
 
 /**
  * Created by IntelliJ IDEA.
- * User: Stepanov Dmitriy
+ * UserDAO: Stepanov Dmitriy
  * Date: 01.12.11
  * Time: 12:46
  *

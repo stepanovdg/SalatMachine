@@ -57,9 +57,9 @@
         <auth-constraint>
             <role-name>nullrole</role-name>
         </auth-constraint>
-        <user-data-constraint>
+        <userDAO-data-constraint>
             <transport-guarantee>NONE</transport-guarantee>
-        </user-data-constraint>
+        </userDAO-data-constraint>
     </security-constraint>
 
     <security-role>

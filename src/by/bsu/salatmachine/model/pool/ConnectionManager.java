@@ -7,7 +7,7 @@ import java.sql.SQLException;
 
 /**
  * Created by IntelliJ IDEA.
- * User: Stepanov Dmitriy
+ * UserDAO: Stepanov Dmitriy
  * Date: 04.12.11
  * Time: 10:48
  *

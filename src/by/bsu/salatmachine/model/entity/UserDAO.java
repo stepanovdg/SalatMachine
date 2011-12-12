@@ -2,12 +2,12 @@ package by.bsu.salatmachine.model.entity;
 
 /**
  * Created by IntelliJ IDEA.
- * User: Stepanov Dmitriy
+ * UserDAO: Stepanov Dmitriy
  * Date: 04.12.11
  * Time: 15:16
  *
  */
-public class User {
+public class UserDAO extends AbstractDAO{
 
     private String login,password;
     private Integer money;
@@ -20,7 +20,7 @@ public class User {
         if (type){
             return "Admin";
         }else
-        return "User";
+        return "UserDAO";
     }
 
     public void setType(boolean type) {

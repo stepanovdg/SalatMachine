@@ -34,9 +34,9 @@
     <input type="submit" value="Enter">
 </form>
 <hr/>
-<!--cbck:log level="debug">
+<cbck:log level="info" configFile="log4j.properties">
 Debug message from logger.jsp //todo
-<!/cbck:log-->
+</cbck:log>
 <jsp:include page="${foot}"/>
 </body>
 </html>

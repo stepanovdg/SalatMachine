@@ -15,57 +15,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="f663f5a5-2236-4621-b052-f5f37073d521" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/profiles_settings.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/by/bsu/salatmachine/controller/filters/DemoCharServlet.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/by/bsu/salatmachine/controller/filters/EncodingFilter.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/by/bsu/salatmachine/controller/filters/SecurityFilter.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/by/bsu/salatmachine/enums/Role.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/by/bsu/salatmachine/model/commands/ReceptCommand.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/by/bsu/salatmachine/model/entity/CookingAction.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/by/bsu/salatmachine/model/entity/Recept.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/by/bsu/salatmachine/model/logic/AbstractDAO.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/by/bsu/salatmachine/model/logic/LoginDAO.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/by/bsu/salatmachine/model/logic/ManagerDAO.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/by/bsu/salatmachine/model/logic/ReceptDAO.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/by/bsu/salatmachine/model/logic/ReceptStorageDAO.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/view/logined/recept.jsp" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/view/logined/receptStorage.jsp" />
-      <change type="DELETED" beforePath="C:\Users\Дмитрий\Documents\Java\Intelig.Idea\EpamWebProject\.idea\artifacts\SalatMachine_ear_exploded.xml" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\Дмитрий\Documents\Java\Intelig.Idea\EpamWebProject\src\by\bsu\salatmachine\model\entity\ReceptDAO.java" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\Дмитрий\Documents\Java\Intelig.Idea\EpamWebProject\src\by\bsu\salatmachine\model\logic\LoginLogic.java" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\Дмитрий\Documents\Java\Intelig.Idea\EpamWebProject\src\by\bsu\salatmachine\model\logic\ReceptStorageLogic.java" afterPath="" />
-      <change type="MOVED" beforePath="C:\Users\Дмитрий\Documents\Java\Intelig.Idea\EpamWebProject\src\by\bsu\salatmachine\model\entity\AbstractDAO.java" afterPath="$PROJECT_DIR$/src/by/bsu/salatmachine/model/entity/AbstractEntity.java" />
-      <change type="MOVED" beforePath="C:\Users\Дмитрий\Documents\Java\Intelig.Idea\EpamWebProject\src\by\bsu\salatmachine\model\entity\ReceptStorageDAO.java" afterPath="$PROJECT_DIR$/src/by/bsu/salatmachine/model/entity/ReceptStorage.java" />
-      <change type="MOVED" beforePath="C:\Users\Дмитрий\Documents\Java\Intelig.Idea\EpamWebProject\src\by\bsu\salatmachine\model\entity\UserDAO.java" afterPath="$PROJECT_DIR$/src/by/bsu/salatmachine/model/entity/User.java" />
-      <change type="MOVED" beforePath="C:\Users\Дмитрий\Documents\Java\Intelig.Idea\EpamWebProject\src\by\bsu\salatmachine\model\entity\VegetStorageDAO.java" afterPath="$PROJECT_DIR$/src/by/bsu/salatmachine/model/entity/VegetStorage.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/misc.xml" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/SalatMachine.iml" afterPath="$PROJECT_DIR$/SalatMachine.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/by/bsu/salatmachine/controller/ControllerServlet.java" afterPath="$PROJECT_DIR$/src/by/bsu/salatmachine/controller/ControllerServlet.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/by/bsu/salatmachine/controller/RequestHelper.java" afterPath="$PROJECT_DIR$/src/by/bsu/salatmachine/controller/RequestHelper.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/by/bsu/salatmachine/controller/manager/ConfigurationManager.java" afterPath="$PROJECT_DIR$/src/by/bsu/salatmachine/controller/manager/ConfigurationManager.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/by/bsu/salatmachine/controller/manager/MessageManager.java" afterPath="$PROJECT_DIR$/src/by/bsu/salatmachine/controller/manager/MessageManager.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/by/bsu/salatmachine/controller/tags/LoggerTag.java" afterPath="$PROJECT_DIR$/src/by/bsu/salatmachine/controller/tags/LoggerTag.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/by/bsu/salatmachine/model/commands/Command.java" afterPath="$PROJECT_DIR$/src/by/bsu/salatmachine/model/commands/Command.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/by/bsu/salatmachine/model/commands/LoginCommand.java" afterPath="$PROJECT_DIR$/src/by/bsu/salatmachine/model/commands/LoginCommand.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/by/bsu/salatmachine/model/commands/NoCommand.java" afterPath="$PROJECT_DIR$/src/by/bsu/salatmachine/model/commands/NoCommand.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/by/bsu/salatmachine/model/commands/ReceptStorageCommand.java" afterPath="$PROJECT_DIR$/src/by/bsu/salatmachine/model/commands/ReceptStorageCommand.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/by/bsu/salatmachine/model/pool/ConnectionManager.java" afterPath="$PROJECT_DIR$/src/by/bsu/salatmachine/model/pool/ConnectionManager.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/by/bsu/salatmachine/model/pool/JDCConnection.java" afterPath="$PROJECT_DIR$/src/by/bsu/salatmachine/model/pool/JDCConnection.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/by/bsu/salatmachine/model/pool/JDCConnectionDriver.java" afterPath="$PROJECT_DIR$/src/by/bsu/salatmachine/model/pool/JDCConnectionDriver.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/by/bsu/salatmachine/model/pool/JDCConnectionPool.java" afterPath="$PROJECT_DIR$/src/by/bsu/salatmachine/model/pool/JDCConnectionPool.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/resources/config.properties" afterPath="$PROJECT_DIR$/src/resources/config.properties" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/resources/messages.properties" afterPath="$PROJECT_DIR$/src/resources/messages.properties" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/resources/messages_de_DE.properties" afterPath="$PROJECT_DIR$/src/resources/messages_de_DE.properties" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/resources/messages_ru_RU.properties" afterPath="$PROJECT_DIR$/src/resources/messages_ru_RU.properties" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/META-INF/context.xml" afterPath="$PROJECT_DIR$/web/META-INF/context.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/WEB-INF/application.xml" afterPath="$PROJECT_DIR$/web/WEB-INF/application.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/WEB-INF/classes/log4j.properties" afterPath="$PROJECT_DIR$/web/WEB-INF/classes/log4j.properties" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/WEB-INF/oldWeb.txt" afterPath="$PROJECT_DIR$/web/WEB-INF/oldWeb.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/WEB-INF/web.xml" afterPath="$PROJECT_DIR$/web/WEB-INF/web.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/view/logined/main.jsp" afterPath="$PROJECT_DIR$/web/view/logined/main.jsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/view/secure/admin.jsp" afterPath="$PROJECT_DIR$/web/view/secure/admin.jsp" />
     </list>
     <ignored path="SalatMachine.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -1091,7 +1041,7 @@
     <option name="CHECK_COMMIT_MESSAGE_SPELLING" value="false" />
     <option name="DEFAULT_PATCH_EXTENSION" value="patch" />
     <option name="FORCE_NON_EMPTY_COMMENT" value="false" />
-    <option name="LAST_COMMIT_MESSAGE" value="images ru de en" />
+    <option name="LAST_COMMIT_MESSAGE" value="images ru de en pool reedit" />
     <option name="MAKE_NEW_CHANGELIST_ACTIVE" value="true" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="false" />
     <option name="CHECK_FILES_UP_TO_DATE_BEFORE_COMMIT" value="false" />
@@ -1119,6 +1069,7 @@
     <MESSAGE value="jdbc connection pool working" />
     <MESSAGE value="internazionalization full working only for two times klicking" />
     <MESSAGE value="images ru de en" />
+    <MESSAGE value="images ru de en pool reedit" />
   </component>
   <component name="VssConfiguration">
     <option name="CLIENT_PATH" value="" />

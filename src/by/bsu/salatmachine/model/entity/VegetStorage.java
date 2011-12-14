@@ -4,12 +4,12 @@ import by.bsu.salatmachine.enums.VegetEnum;
 
 /**
  * Created by IntelliJ IDEA.
- * UserDAO: Stepanov Dmitriy
+ * User: Stepanov Dmitriy
  * Date: 10.12.11
  * Time: 13:04
  * To change this template use File | Settings | File Templates.
  */
-public class VegetStorageDAO extends AbstractDAO{
+public class VegetStorage extends AbstractEntity {
     private VegetEnum idVegetEnum;
     private int idIncludings,idVegetable;
 

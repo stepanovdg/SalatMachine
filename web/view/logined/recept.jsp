@@ -1,7 +1,7 @@
-<%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt" %>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
-<%@ taglib prefix="cbck" uri="http://controller.salatmachine.bsu.by.tags/loggertag" %>
-<%@ page contentType="text/html;charset=UTF-8" language="java" %>
+<%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt" %>
+<%@ page language="java" contentType="text/html;
+        charset=utf-8" pageEncoding="utf-8" %>
 <!--fmt:bundle basename="${applicationScope.config}"-->
 <fmt:bundle basename="resources.config">
     <fmt:message key="HEADER" var="head"/>
@@ -10,9 +10,9 @@
 </fmt:bundle>
 <!--fmt:bundle basename="${applicationScope.message}"-->
 <fmt:bundle basename="resources.messages">
-    <fmt:message key="ADMIN.MAIN" var="main"/>
-    <fmt:message key="ADMIN.TITLE" var="title"/>
-    <fmt:message key="ADMIN.GREETING" var="greet"/>
+    <fmt:message key="MAIN.MAIN" var="main"/>
+    <fmt:message key="RECEPTSTORAGE.TITLE" var="title"/>
+    <fmt:message key="MAIN.GREETING" var="greet"/>
 </fmt:bundle>
 <html>
 <head><title>${title}</title></head>
@@ -29,11 +29,9 @@
                     dateStyle="full" timeStyle="full"/><br/>
 </fmt:timeZone>
 <hr/>
+<c:out value="${recept}"/>
+<hr/>
 <a href="${serv}">${main}</a>
-<cbck:log level="info" configFile="log4j.properties">
-Debug message from  admin logger.jsp
-    <%--//todo--%>
-</cbck:log>
 <jsp:include page="${foot}"/>
 </body>
 </html>

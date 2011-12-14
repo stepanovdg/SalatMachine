@@ -1,15 +1,13 @@
 package by.bsu.salatmachine.controller;
 
-import by.bsu.salatmachine.model.commands.Command;
-import by.bsu.salatmachine.model.commands.LoginCommand;
-import by.bsu.salatmachine.model.commands.NoCommand;
+import by.bsu.salatmachine.model.commands.*;
 
 import javax.servlet.http.HttpServletRequest;
 import java.util.HashMap;
 
 /**
  * Created by IntelliJ IDEA.
- * UserDAO: Stepanov Dmitriy
+ * User: Stepanov Dmitriy
  * Date: 28.11.11
  * Time: 23:01
  */
@@ -21,6 +19,8 @@ public class RequestHelper {
     private RequestHelper() {
 //заполнение таблицы командами
         commands.put("login", new LoginCommand());
+         commands.put("receptst", new ReceptStorageCommand());
+         commands.put("recept", new ReceptCommand());
     }
 
     public Command getCommand(HttpServletRequest request) {

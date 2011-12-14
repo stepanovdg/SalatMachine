@@ -5,16 +5,16 @@ import java.util.Map;
 
 /**
  * Created by IntelliJ IDEA.
- * UserDAO: Stepanov Dmitriy
+ * User: Stepanov Dmitriy
  * Date: 10.12.11
  * Time: 13:07
- * To change this template use File | Settings | File Templates.
+ *
  */
-public class ReceptStorageDAO extends AbstractDAO{
+public class ReceptStorage extends AbstractEntity {
     private Map<Integer,String> storage;
 
 
-    public ReceptStorageDAO() {
+    public ReceptStorage() {
         this.storage = new HashMap<>();
     }
 
@@ -27,5 +27,12 @@ public class ReceptStorageDAO extends AbstractDAO{
 
     public void setStorage(Map<Integer, String> storage) {
         this.storage = storage;
+    }
+
+    @Override
+    public String toString() {
+
+        return storage.toString();
+               //todo
     }
 }

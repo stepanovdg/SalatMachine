@@ -29,6 +29,13 @@
                     dateStyle="full" timeStyle="full"/><br/>
 </fmt:timeZone>
 <hr/>
+<form name="receptStorage" method="POST"
+      action=${serv}>
+    <input type="hidden" name="command" value="receptst"/>
+
+    <input type="submit" value="Enter">
+</form>
+<hr/>
 <a href="${serv}">${main}</a>
 <jsp:include page="${foot}"/>
 </body>

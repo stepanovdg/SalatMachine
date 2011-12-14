@@ -2,7 +2,7 @@ package by.bsu.salatmachine.model.pool;
 
 /**
  * Created by IntelliJ IDEA.
- * UserDAO: Stepanov Dmitriy
+ * User: Stepanov Dmitriy
  * Date: 01.12.11
  * Time: 12:46
  *
@@ -83,6 +83,10 @@ public class JDCConnectionPool {
            c = connections.elementAt(i);
            if (c.lease()) {
               return c;
+           }else {
+               if(i==poolsize-1){
+                 throw new SQLException("All connections available for this resource are in use");
+               }
            }
        }
 

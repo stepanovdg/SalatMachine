@@ -1,9 +1,9 @@
 package by.bsu.salatmachine.model.commands;
 
-import by.bsu.salatmachine.model.entity.UserDAO;
-import by.bsu.salatmachine.model.logic.LoginLogic;
 import by.bsu.salatmachine.controller.manager.ConfigurationManager;
 import by.bsu.salatmachine.controller.manager.MessageManager;
+import by.bsu.salatmachine.model.entity.User;
+import by.bsu.salatmachine.model.logic.ManagerDAO;
 
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServletRequest;
@@ -13,7 +13,7 @@ import java.rmi.RemoteException;
 
 /**
  * Created by IntelliJ IDEA.
- * UserDAO: Stepanov Dmitriy
+ * User: Stepanov Dmitriy
  * Date: 28.11.11
  * Time: 23:05
  */
@@ -31,9 +31,9 @@ public class LoginCommand implements Command {
         pass=passwordCrypting(pass);
         //проверка логина и пароля
         try {
-           UserDAO userDAO = LoginLogic.getLogin(login, pass);
-                request.getSession().setAttribute("user", userDAO);
-                if (!userDAO.isType()){
+           User user = (User) ManagerDAO.getInstance().getDao("user").getEntity(login, pass);
+                request.getSession().setAttribute("user", user);
+                if (!user.isType()){
                 page = ConfigurationManager.getInstance()
                         .getProperty("MAIN_PAGE_PATH");
                 }else {
@@ -55,7 +55,7 @@ public class LoginCommand implements Command {
     }
     private String passwordCrypting(String pass){
         StringBuilder passnew = new StringBuilder();
-      //  if (pass.length()%2==0){
+      //  if (pass.length()%2==0){                //TODO MD5
             passnew.append(String.valueOf(pass.subSequence(0,pass.length()/2).hashCode()));
             passnew.append('-');
             passnew.append(String.valueOf(pass.subSequence((pass.length() / 2) + 1, pass.length()).hashCode()));

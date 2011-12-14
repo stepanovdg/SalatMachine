@@ -5,7 +5,8 @@
 		  http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd"
          id="SalatMachine-Web" version="2.5">
     <display-name>SalatMachineWeb</display-name>
-   <!-- <context-param>
+    <distributable/>
+    <!-- <context-param>
         <param-name>config</param-name>
         <param-value>resources.config</param-value>
     </context-param>
@@ -54,11 +55,24 @@
 			<taglib-location>/WEB-INF/tld/loggertag.tld</taglib-location>
 		</taglib>
 	</jsp-config>
-
-    <!--context-param>
-    <param-name>javax.servlet.jsp.jstl.fmt.LocalizationContext</param-name>
-    <param-value>resources.config</param-value>
-    </context-param-->
+    <!--
+    <filter>
+        <filter-name>encodingFilter</filter-name>
+        <filter-class>by.bsu.salatmachine.controller.filters.EncodingFilter</filter-class>
+    </filter>
+    <filter-mapping>
+        <filter-name>encodingFilter</filter-name>
+        <url-pattern>*.jsp</url-pattern>
+    </filter-mapping>
+    <filter>
+        <filter-name>securityFilter</filter-name>
+        <filter-class>by.bsu.salatmachine.controller.filters.SecurityFilter</filter-class>
+    </filter>
+    <filter-mapping>
+        <filter-name>securityFilter</filter-name>
+        <url-pattern>*.jsp</url-pattern>
+    </filter-mapping>
+    -->
     <error-page>
             <error-code>500</error-code>
             <location>/view/unlogined/error.jsp</location>

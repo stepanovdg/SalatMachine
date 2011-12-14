@@ -9,7 +9,7 @@ import static by.bsu.salatmachine.controller.manager.ConfigurationManager.getIns
 
 /**
  * Created by IntelliJ IDEA.
- * UserDAO: Stepanov Dmitriy
+ * User: Stepanov Dmitriy
  * Date: 28.11.11
  * Time: 23:07
  */

@@ -9,7 +9,7 @@ import java.lang.reflect.Method;
 
 /**
  * Created by IntelliJ IDEA.
- * UserDAO: Stepanov Dmitriy
+ * User: Stepanov Dmitriy
  * Date: 29.11.11
  * Time: 22:23
  */

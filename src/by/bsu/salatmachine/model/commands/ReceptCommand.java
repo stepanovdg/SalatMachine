@@ -1,7 +1,8 @@
 package by.bsu.salatmachine.model.commands;
 
+import by.bsu.salatmachine.controller.manager.ConfigurationManager;
 import by.bsu.salatmachine.controller.manager.MessageManager;
-import by.bsu.salatmachine.model.entity.ReceptStorage;
+import by.bsu.salatmachine.model.entity.Recept;
 import by.bsu.salatmachine.model.entity.User;
 import by.bsu.salatmachine.model.logic.ManagerDAO;
 
@@ -16,34 +17,34 @@ import static by.bsu.salatmachine.controller.manager.ConfigurationManager.getIns
 /**
  * Created by IntelliJ IDEA.
  * User: Stepanov Dmitriy
- * Date: 10.12.11
- * Time: 14:16
- *
+ * Date: 13.12.11
+ * Time: 9:12
  */
-public class ReceptStorageCommand implements Command{
+public class ReceptCommand implements Command{
     @Override
     public String execute(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-         String page = null;
-          ReceptStorage receptStorage = null;
+        String page = null;
+          Recept recept = null;
         //извлечение из запроса логина и пароля
         User user = (User) request.getSession().getAttribute("user");
         String login = user.getLogin();
+        Integer idRecept = (Integer) request.getAttribute("idRecept");
 
         //проверка логина и пароля
         try {
             if(login!=null){
-                receptStorage = (ReceptStorage) ManagerDAO.getInstance().getDao("receptStorage").getEntity(login);
-            } else{
+                recept = (Recept) ManagerDAO.getInstance().getDao("recept").getEntity(idRecept);
+            }else{
                 page = getInstance().getProperty("LOGIN_PAGE_PATH");
             }
-                request.getSession().setAttribute("receptStorage", receptStorage);
-                page = getInstance().getProperty("RECEPTSTORAGE_PAGE_PATH");
+                request.getSession().setAttribute("recept", recept);
+                page = ConfigurationManager.getInstance().getProperty("RECEPT_PAGE_PATH");
 
         } catch (RemoteException e) {
             request.setAttribute("errorMessage",
                         MessageManager.getInstance()
                                 .getProperty("RECEPT_ERROR_MESSAGE"));
-                page = getInstance()
+                page = ConfigurationManager.getInstance()
                         .getProperty("ERROR_PAGE_PATH");
         }
         return page;

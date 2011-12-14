@@ -1,12 +1,14 @@
 package by.bsu.salatmachine.model.entity;
 
+import java.io.Serializable;
+
 /**
  * Created by IntelliJ IDEA.
- * UserDAO: Stepanov Dmitriy
+ * User: Stepanov Dmitriy
  * Date: 09.12.11
  * Time: 13:33
  *
  */
-public class AbstractDAO {
+public abstract class AbstractEntity implements Serializable{
 
 }

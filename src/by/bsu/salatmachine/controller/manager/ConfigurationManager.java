@@ -5,7 +5,7 @@ import java.util.ResourceBundle;
 
 /**
  * Created by IntelliJ IDEA.
- * UserDAO: Stepanov Dmitriy
+ * User: Stepanov Dmitriy
  * Date: 28.11.11
  * Time: 23:08
  */

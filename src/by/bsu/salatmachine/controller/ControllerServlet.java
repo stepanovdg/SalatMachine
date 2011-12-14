@@ -13,7 +13,7 @@ import java.io.IOException;
 
 /**
  * Created by IntelliJ IDEA.
- * UserDAO: Stepanov Dmitriy
+ * User: Stepanov Dmitriy
  * Date: 28.11.11
  * Time: 18:39
  */
@@ -93,6 +93,7 @@ public class ControllerServlet extends HttpServlet {
         RequestDispatcher dispatcher = getServletContext().getRequestDispatcher(page);
         //response.set
       //todo add user to ssesion  getServletConfig().getServletContext().
+
         dispatcher.forward(request, response);
     }
 

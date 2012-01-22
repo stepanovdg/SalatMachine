@@ -9,7 +9,7 @@ import java.util.ResourceBundle;
  * Date: 28.11.11
  * Time: 23:08
  */
-public class ConfigurationManager {
+public final class ConfigurationManager {
     private static ConfigurationManager instance;
     private ResourceBundle resourceBundle;
     //класс извлекает информацию из файла config.properties

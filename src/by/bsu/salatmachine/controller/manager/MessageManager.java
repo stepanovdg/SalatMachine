@@ -1,5 +1,6 @@
 package by.bsu.salatmachine.controller.manager;
 
+import java.util.Locale;
 import java.util.ResourceBundle;
 
 /**
@@ -9,7 +10,7 @@ import java.util.ResourceBundle;
  * Time: 23:09
  *
  */
-public class MessageManager {
+public final class MessageManager {
     private static MessageManager instance;
     private ResourceBundle resourceBundle;
     //класс извлекает информацию из файла messages. properties
@@ -24,8 +25,17 @@ public class MessageManager {
         }
         return instance;
     }
+    public static MessageManager getInstance(Locale locale) {
+        if (instance == null) {
+            instance = new MessageManager();
+            instance.resourceBundle =
+                    ResourceBundle.getBundle(BUNDLE_NAME,locale);
+        }
+        return instance;
+    }
 
     public String getProperty(String key) {
         return (String) resourceBundle.getObject(key);
     }
+
 }

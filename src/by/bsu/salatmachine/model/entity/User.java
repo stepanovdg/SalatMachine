@@ -9,7 +9,10 @@ package by.bsu.salatmachine.model.entity;
  */
 public class User extends AbstractEntity {
 
-    private String login,password;
+    private static final String ADMIN = "Admin";
+    private static final String USER = "User";
+    private String login;
+    private transient String password;
     private Integer money;
     private boolean type;
 
@@ -18,9 +21,9 @@ public class User extends AbstractEntity {
     }
     public String getType() {
         if (type){
-            return "Admin";
+            return ADMIN;
         }else
-        return "User";
+        return USER;
     }
 
     public void setType(boolean type) {
@@ -51,4 +54,9 @@ public class User extends AbstractEntity {
         this.login = login;
     }
 
+    @Override
+    public int compareTo(Object o) {
+        User u1 = (User) o;
+        return this.getLogin().compareTo(u1.getLogin());
+    }
 }

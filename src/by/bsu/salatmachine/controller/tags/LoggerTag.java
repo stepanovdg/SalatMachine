@@ -4,6 +4,7 @@ import org.apache.log4j.Logger;
 import org.apache.log4j.PropertyConfigurator;
 
 import javax.servlet.jsp.JspException;
+import javax.servlet.jsp.JspTagException;
 import javax.servlet.jsp.tagext.BodyTagSupport;
 import java.lang.reflect.Method;
 
@@ -14,6 +15,9 @@ import java.lang.reflect.Method;
  * Time: 22:23
  */
 public class LoggerTag extends BodyTagSupport {
+    private static final String FILE_SEPARATOR = "file.separator";
+    private static final String WEB_INF_CLASSES = "WEB-INF/classes/";
+    private static final String THE_VALUE_GIVEN_FOR_THE_LEVEL_ATTRIBUTE_IS_INVALID = "The value given for the level attribute is invalid.";
     private Logger log = null;
     private String configFile = null;
     private String level = null;
@@ -35,7 +39,7 @@ public class LoggerTag extends BodyTagSupport {
     public int doEndTag() throws JspException {
 
         String realPath = pageContext.getServletContext().getRealPath("/");
-        String fileSep = System.getProperty("file.separator");
+        String fileSep = System.getProperty(FILE_SEPARATOR);
 
         if (realPath != null && (!realPath.endsWith(fileSep))) {
             realPath = realPath + fileSep;
@@ -44,7 +48,7 @@ public class LoggerTag extends BodyTagSupport {
         //configure the logger if the user provides this optional attribute
         if (configFile != null)
             PropertyConfigurator.configure(realPath +
-                    "WEB-INF/classes/" + configFile);
+                    WEB_INF_CLASSES + configFile);
 
         //throw an exception if the tag user provides an invalid level,
         //something other than DEBUG, INFO, WARN, ERROR, or FATAL
@@ -53,26 +57,19 @@ public class LoggerTag extends BodyTagSupport {
 
         if (!contains(level))
             throw new JspException(
-                    "The value given for the level attribute is invalid.");
+                    THE_VALUE_GIVEN_FOR_THE_LEVEL_ATTRIBUTE_IS_INVALID);
 
-        //The logger has the same name as the class:
-        //com.jspservletcookbook.LoggerTag. Therefore, it inherits its
-        //appenders from a logger defined in the config file:
-        //com.jspservletcookbook
+
         log = Logger.getLogger(LoggerTag.class);
 
         String message = getBodyContent().getString().trim();
-        Method method = null;
+        Method method;
 
         try {
-
-            method = log.getClass( ). getMethod(level,new Class[]{ Object.class });
-
-            method.invoke(log, new Object[]{new String[]{message}});
-
-
+            method = log.getClass().getMethod(level, new Class[]{Object.class});
+            method.invoke(log, message);
         } catch (Exception e) {
-            //todo
+            throw new JspTagException(e.getMessage());
         }
 
         return EVAL_PAGE;
@@ -88,10 +85,8 @@ public class LoggerTag extends BodyTagSupport {
     }// release
 
     private boolean contains(String str) {
-
-        for (int i = 0; i < LEVELS.length; i++) {
-
-            if (LEVELS[i].equals(str))
+        for (String LEVEL : LEVELS) {
+            if (LEVEL.equals(str))
                 return true;
         }
         return false;

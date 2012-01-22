@@ -1,0 +1,72 @@
+<%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt" %>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+<%@ page contentType="text/html;charset=UTF-8" language="java" %>
+<fmt:bundle basename="resources.config">
+    <fmt:message key="HEADER.CSS" var="css"/>
+    <fmt:message key="TABLE.CSS" var="tcss"/>
+    <fmt:message key="MENU.JS" var="menujs"/>
+    <fmt:message key="MENU.CSS" var="menucss"/>
+    <fmt:message key="HEADER" var="head"/>
+    <fmt:message key="FOOTER" var="foot"/>
+    <fmt:message key="SERVLET" var="serv"/>
+    <fmt:message key="VISIBILITY_PAGE_PATH" var="thisPage"/>
+</fmt:bundle>
+<fmt:bundle basename="resources.messages">
+    <fmt:message key="ADMIN.MAIN" var="main"/>
+    <fmt:message key="ADMIN.TITLE" var="title"/>
+    <fmt:message key="ADMIN.GREETING" var="greet"/>
+    <fmt:message key="PECEPTST.TABLETITLE.NUMBER" var="number"/>
+    <fmt:message key="PECEPTST.TABLETITLE.NAME" var="name"/>
+    <fmt:message key="PECEPTST.TABLETITLE.AUTHOR" var="author"/>
+    <fmt:message key="RECEPTST.DELETEBUTTON" var="delete"/>
+    <fmt:message key="ADMIN.CHANGEBUTTON" var="change"/>
+
+</fmt:bundle>
+<html>
+<head>
+    <title>${title}</title>
+    <link rel="stylesheet" href="${pageContext.request.contextPath}${css}" type="text/css" media="screen"/>
+    <link rel="stylesheet" href="${pageContext.request.contextPath}${tcss}" type="text/css" media="screen"/>
+</head>
+<body>
+<jsp:include page="${head}"/>
+<jsp:useBean id="now" class="java.util.Date"/>
+<h3>${title}</h3>
+<hr/>
+<c:out value="${greet}, ${user.getLogin()}"/>
+<hr/>
+<fmt:timeZone value="${sessionScope.timezone}">
+    <fmt:formatDate value="${now}" type="both"
+                    dateStyle="full" timeStyle="full"/><br/>
+</fmt:timeZone>
+<table border="1" cellspacing=3 align="center">
+    <TR>
+        <TH>${number}</TH>
+        <TH>${name}</TH>
+        <TH>${author}</TH>
+    </TR>
+    <c:forEach items="${receptStorage.toArray()}" var="rec">
+        <tr>
+            <td align="center"><c:out value="${rec.getIdRecept()}"/></td>
+            <td align="center">
+                <c:out value="${rec.getName()}"/>
+            </td>
+            <td align="center"><c:out value="${rec.getVisibility()}"/></td>
+            <td align="center">
+                <form name="recept" method="POST" action=${serv}>
+                    <input type="hidden" name="command" value="visibilityChange"/>
+                    <input type="hidden" name="idRecept" value="${rec.getIdRecept()}">
+                    <input type="submit" value="${change}">
+                </form>
+                <form name="recept" method="POST" action=${serv}>
+                    <input type="hidden" name="command" value="deleteReceptSt"/>
+                    <input type="hidden" name="idRecept" value="${rec.getIdRecept()}">
+                    <input type="hidden" name="page" value="${thisPage}">
+                    <input type="submit" value="${delete}">
+                </form>
+            </td>
+        </tr>
+    </c:forEach>
+</table>
+</body>
+</html>

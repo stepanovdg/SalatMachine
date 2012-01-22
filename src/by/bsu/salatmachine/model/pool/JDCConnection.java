@@ -16,23 +16,23 @@ public class JDCConnection implements Connection {
 
     private JDCConnectionPool pool;
     private Connection conn;
-    private boolean inuse;
-    private long timestamp;
+    private boolean inUse;
+    private long timeStamp;
 
 
     public JDCConnection(Connection conn, JDCConnectionPool pool) {
         this.conn=conn;
         this.pool=pool;
-        this.inuse=false;
-        this.timestamp=0;
+        this.inUse =false;
+        this.timeStamp =0;
     }
 
     public synchronized boolean lease() {
-       if(inuse)  {
+       if(inUse)  {
            return false;
        } else {
-          inuse=true;
-          timestamp=System.currentTimeMillis();
+          inUse =true;
+          timeStamp =System.currentTimeMillis();
           return true;
        }
     }
@@ -46,11 +46,11 @@ public class JDCConnection implements Connection {
     }
 
     public boolean inUse() {
-        return inuse;
+        return inUse;
     }
 
     public long getLastUse() {
-        return timestamp;
+        return timeStamp;
     }
 
     public void close() throws SQLException {
@@ -58,7 +58,7 @@ public class JDCConnection implements Connection {
     }
 
     protected void expireLease() {
-        inuse=false;
+        inUse =false;
     }
 
     protected Connection getConnection() {
@@ -301,6 +301,7 @@ public class JDCConnection implements Connection {
     public int getNetworkTimeout() throws SQLException {
         return 0;  //To change body of implemented methods use File | Settings | File Templates.
     }
+
 
     @Override
     public <T> T unwrap(Class<T> iface) throws SQLException {

@@ -1,10 +1,10 @@
 package by.bsu.salatmachine.model.logic;
 
 import by.bsu.salatmachine.controller.manager.ConfigurationManager;
-import by.bsu.salatmachine.model.entity.ReceptStorage;
+import by.bsu.salatmachine.exceptions.DatabaseConnectionException;
+import by.bsu.salatmachine.model.entity.*;
 import by.bsu.salatmachine.model.pool.ConnectionManager;
 
-import java.rmi.RemoteException;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
@@ -17,120 +17,117 @@ import java.sql.SQLException;
  * Time: 13:28
  */
 public class ReceptStorageDAO extends AbstractDAO<ReceptStorage> {
-    private PreparedStatement st1;
+    private final static String RECEPTSTORAGE_GETENTITY = "SELECT * FROM vegetdb.receptstorage WHERE visibility=? OR visibility=? and inUse = 1";
+    private final static String RECEPTSTORAGE_CREATE = "INSERT INTO vegetdb.receptstorage (nameRecept, visibility) VALUES (?,?)";
+    private final static String RECECPTSTORAGE_GETENTITY_ALL = "SELECT * FROM vegetdb.receptstorage ";
+    private final static String RECECPTSTORAGE_VISIBILITY_CHANGE = "UPDATE vegetdb.receptstorage SET visibility = 'admin' WHERE idRecept=?; ";
+    private final static String RECECPTSTORAGE_DELETE = "DELETE FROM vegetdb.receptstorage WHERE idrecept=?";
 
-   /* public static ReceptStorage getRecept(
-            String login) throws RemoteException {
-        ReceptStorage receptStorage = new ReceptStorage();
-        try {
-            Connection cn = ConnectionManager.getConnection();
-            try (PreparedStatement st = cn.prepareStatement(
-                    "SELECT * FROM vegetdb.receptstorage WHERE visibility=? OR visibility=?")) {
-                st.setString(1, login);
-                st.setString(2, ConfigurationManager.getInstance().getProperty("ADMIN_LOGIN"));
-                try (ResultSet rs = st.executeQuery()) {
-                    if (rs.next()) {
-                        do {
-                            receptStorage.addRecept(rs.getInt(1), rs.getString(2));
-                        } while (rs.next());
-                    } else {
-                        throw new RemoteException("Reading: the list of recepts is empty");
-                    }
-                }
-            } finally {
-                try {
-                    cn.close();
-                } catch (Exception ignore) {
-                }
-            }
-        } catch (SQLException e) {
-            throw new RemoteException(e.getMessage());
-        }
-        return receptStorage;
-
-    }
-
-    public static ReceptStorage getAllRecept(
-            String login) throws RemoteException {
-        ReceptStorage receptStorage = new ReceptStorage();
-        try {
-            Connection cn = ConnectionManager.getConnection();
-            try (PreparedStatement st = cn.prepareStatement(
-                    "SELECT * FROM vegetdb.receptstorage ")) {
-                try (ResultSet rs = st.executeQuery()) {
-                    if (rs.next()) {
-                        do {
-                            receptStorage.addRecept(rs.getInt(1), rs.getString(2));
-                        } while (rs.next());
-                    } else {
-                        throw new RemoteException("Reading: the list of recepts is empty");
-                    }
-                }
-
-
-            } finally {
-
-                try {
-                    cn.close();
-                } catch (Exception ignore) {
-                }
-            }
-        } catch (SQLException e) {
-            throw new RemoteException(e.getMessage());
-        }
-        return receptStorage;
-
-    }*/
-
-    @Override
-    public ReceptStorage getEntity(Object... objects) throws RemoteException {
-        String login = (String) objects[0];
+    private PreparedStatement loginType(String login, Connection cn) throws SQLException {
+        PreparedStatement st1;
         String admin = ConfigurationManager.getInstance().getProperty("ADMIN_LOGIN");
-        ReceptStorage receptStorage = new ReceptStorage();
-        try {
-            Connection cn = ConnectionManager.getInstance().getConnection();
-            try {
-                if (login.toLowerCase().equals(admin.toLowerCase())) {
-                    st1 = cn.prepareStatement(ConfigurationManager.getInstance().getProperty("RECEPTSTORAGE_GETENTITY"));
-                    st1.setString(1, login);
-                    st1.setString(2, admin);
-                }else{
-                    st1 = cn.prepareStatement(
-                    "SELECT * FROM vegetdb.receptstorage ");
-                }
-                try (ResultSet rs = st1.executeQuery()) {
+        if (!login.toLowerCase().equals(admin.toLowerCase())) {
+            st1 = cn.prepareStatement(RECEPTSTORAGE_GETENTITY);
+            st1.setString(1, login);
+            st1.setString(2, admin);
+        } else {
+            st1 = cn.prepareStatement(RECECPTSTORAGE_GETENTITY_ALL);
+        }
+        return st1;
+    }
+
+    @Override
+    public EntityIF getEntity(Object... objects) throws DatabaseConnectionException {
+        String login = (String) objects[0];
+
+        EntityIF retn = new NullEntity();
+        ReceptStorage receptStorage;
+        TreeSetOfEntity<ReceptStorage> receptStorageTree = new TreeSetOfEntity<>();
+        try (Connection cn = ConnectionManager.getInstance().getConnection()) {
+            try (PreparedStatement statement = loginType(login, cn)) {
+                try (ResultSet rs = statement.executeQuery()) {
                     if (rs.next()) {
+
                         do {
-                            receptStorage.addRecept(rs.getInt(1), rs.getString(2));
+                            receptStorage = new ReceptStorage(rs.getInt(1), rs.getString(2), rs.getString(3));
+                            receptStorageTree.add(receptStorage);
                         } while (rs.next());
+                        retn = receptStorageTree;
                     } else {
-                        throw new RemoteException("Reading: the list of recepts is empty"); //TODO DELETE ALL REMOTE
+                        return retn;
                     }
-                }
-            } finally {
-                try {
-                    cn.close();
-                } catch (Exception ignore) {
                 }
             }
         } catch (SQLException e) {
-            throw new RemoteException(e.getMessage());
+            throw new DatabaseConnectionException(e);
         }
-        return receptStorage;
+        return retn;
     }
 
     @Override
-    public boolean create(ReceptStorage entity) throws RemoteException {
-        return false;  //To change body of implemented methods use File | Settings | File Templates.
+    public boolean create(EntityIF entity) throws DatabaseConnectionException {
+        ReceptStorage receptStorage = (ReceptStorage) entity;
+
+        try (Connection cn = ConnectionManager.getInstance().getConnection()) {
+            try (PreparedStatement st = cn.prepareStatement(RECEPTSTORAGE_CREATE)) {
+                st.setString(1, receptStorage.getName());
+                st.setString(2, receptStorage.getVisibility());
+                st.execute();
+                return true;
+            }
+
+        } catch (SQLException e) {
+            throw new DatabaseConnectionException(e);
+        }
+
+
+    }
+
+    public boolean visibilityChange(Integer idRecept) throws DatabaseConnectionException {
+        try (Connection cn = ConnectionManager.getInstance().getConnection()) {
+            try (PreparedStatement st = cn.prepareStatement(RECECPTSTORAGE_VISIBILITY_CHANGE)) {
+                st.setInt(1, idRecept);
+                st.execute();
+                return true;
+            }
+
+        } catch (SQLException e) {
+            throw new DatabaseConnectionException(e);
+        }
     }
 
     @Override
-    public boolean refresh(ReceptStorage entity) throws RemoteException {
-        return false;  //To change body of implemented methods use File | Settings | File Templates.
+    public boolean refresh(ReceptStorage entity) throws DatabaseConnectionException {
+        return false;
     }
 
     @Override
-    public boolean store(ReceptStorage entity) throws RemoteException {
-        return false;  //To change body of implemented methods use File | Settings | File Templates.
+    public boolean delete(ReceptStorage entity) throws DatabaseConnectionException {
+        try (Connection cn = ConnectionManager.getInstance().getConnection()) {
+            try (PreparedStatement st = cn.prepareStatement(RECECPTSTORAGE_DELETE)) {
+                st.setInt(1, entity.getIdRecept());
+                return st.execute();
+            }
+        } catch (SQLException e) {
+            throw new DatabaseConnectionException(e);
+        }
+    }
+
+    public boolean delete(Integer idRecept) throws DatabaseConnectionException {
+            try (Connection cn = ConnectionManager.getInstance().getConnection()) {
+                try (PreparedStatement st = cn.prepareStatement(RECECPTSTORAGE_DELETE)) {
+                    st.setInt(1, idRecept);
+                    st.execute();
+                    return true;
+                }
+            } catch (SQLException e) {
+                throw new DatabaseConnectionException(e);
+            }
+
+        }
+
+    @Override
+    public boolean store(ReceptStorage entity) throws DatabaseConnectionException {
+        return false;
     }
 }

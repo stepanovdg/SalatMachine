@@ -1,7 +1,9 @@
 package by.bsu.salatmachine.model.pool;
 
 import by.bsu.salatmachine.controller.manager.ConfigurationManager;
+import by.bsu.salatmachine.exceptions.DatabaseConnectionException;
 
+import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.SQLException;
 
@@ -11,43 +13,56 @@ import java.sql.SQLException;
  * Date: 04.12.11
  * Time: 10:48
  */
-public class ConnectionManager {
+public final class ConnectionManager {
+    private static final String ERROR_MESSAGE = "Exception in preparing for connection" +
+            " to database. Please come later.";
+    private static final String DATABASE_DRIVER_NAME = "DATABASE_DRIVER_NAME";
+    private static final String DATABASE_URL = "DATABASE_URL";
+    private static final String DATABASE_USER = "DATABASE_USER";
+    private static final String DATABASE_PASSWORD = "DATABASE_PASSWORD";
+    private static final String DATABASE_CONNECTION = "DATABASE_CONNECTION";
     private String con;
     private static ConnectionManager instance;
 
-    public static ConnectionManager getInstance() {
-        if (instance == null){
+    public static ConnectionManager getInstance() throws DatabaseConnectionException {
+        if (instance == null) {
             instance = new ConnectionManager();
         }
         return instance;
     }
 
-    private ConnectionManager() {
+    private ConnectionManager() throws DatabaseConnectionException {
         try {
             //организация простейшего соединения с базой данных
             String driver = ConfigurationManager.getInstance()
-                    .getProperty("DATABASE_DRIVER_NAME");
+                    .getProperty(DATABASE_DRIVER_NAME);
             String url = ConfigurationManager.getInstance()
-                    .getProperty("DATABASE_URL");
+                    .getProperty(DATABASE_URL);
             String user = ConfigurationManager.getInstance()
-                    .getProperty("DATABASE_USER");
+                    .getProperty(DATABASE_USER);
             String pass = ConfigurationManager.getInstance()
-                    .getProperty("DATABASE_PASSWORD");
+                    .getProperty(DATABASE_PASSWORD);
             con = ConfigurationManager.getInstance()
-                    .getProperty("DATABASE_CONNECTION");
+                    .getProperty(DATABASE_CONNECTION);
             new JDCConnectionDriver(driver, url, user, pass);
-        } catch (ClassNotFoundException e1) {
-            e1.printStackTrace();  //Todo  change body of catch statement use File | Settings | File Templates.
-        } catch (SQLException e1) {
-            e1.printStackTrace();  //To change body of catch statement use File | Settings | File Templates.
-        } catch (InstantiationException e1) {
-            e1.printStackTrace();  //To change body of catch statement use File | Settings | File Templates.
-        } catch (IllegalAccessException e1) {
-            e1.printStackTrace();  //To change body of catch statement use File | Settings | File Templates.
+        } catch (ClassNotFoundException | SQLException | InstantiationException | IllegalAccessException e) {
+            throw new DatabaseConnectionException(e + ERROR_MESSAGE);
         }
     }
 
-    public JDCConnection getConnection() throws SQLException {
+    public JDCConnection getConnection() throws DatabaseConnectionException {
+        try {
             return (JDCConnection) DriverManager.getConnection(con);
+        } catch (SQLException e) {
+            throw (DatabaseConnectionException) e;
+        }
+    }
+
+    public void closeConnection(Connection cn) throws DatabaseConnectionException {
+        try {
+            cn.close();
+        } catch (SQLException e) {
+            throw (DatabaseConnectionException) e;
+        }
     }
 }

@@ -2,16 +2,11 @@
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@ page language="java" contentType="text/html;
         charset=utf-8" pageEncoding="utf-8"  %>
-<%-- <fmt:setBundle  scope="application"  basename="resources.config" var="config"/>
- <fmt:setBundle  scope="application"  basename="resources.messages" var="message"/>
---%>
-<!--fmt:bundle basename="${applicationScope.config}"-->
 <fmt:bundle basename="resources.config">
     <fmt:message key="HEADER" var="head"/>
     <fmt:message key="FOOTER" var="foot"/>
     <fmt:message key="SERVLET" var="serv"/>
 </fmt:bundle>
-<!--fmt:bundle basename="${applicationScope.message}"-->
 <fmt:bundle basename="resources.messages">
     <fmt:message key="INDEX.MAIN" var="main"/>
     <fmt:message key="INDEX.TITLE" var="title"/>

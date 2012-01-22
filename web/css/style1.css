@@ -10,13 +10,38 @@ HTML
 BODY
 {
 	height: 100%;
-	color: #A4A4A4;
+	color: #a4a4a4;
 	cursor: default;
 	font-size: 11px;
 	line-height: 16px;
 	text-align: center;
     background: #000 no-repeat 50% 0;
+    /*background: url("../view/images/faded-wood.jpg") repeat;  */
+     
     font-family: Tahoma, sans-serif;
+}
+table{
+
+    width: 818px;
+   /* background-color: #f3f3f3;
+    color: blue;*/
+    margin:auto;
+
+}
+tr{
+
+}
+hr{
+    width: 818px;
+    background-color: #ffff66;
+    color: blue;
+    margin:auto;
+}
+hgroup{
+    width: 818px;
+    background-color: #ffff66;
+    color: blue;
+    margin:auto;
 }
 A:link, A:visited
 {
@@ -32,6 +57,14 @@ DIV.wrap
 	width: 818px;
 	margin: 0 auto;
 	text-align: left;
+}
+DIV#footer
+{
+	style:"background-color: #a0c8ff; height: 40px;"
+}
+DIV#footer div
+{
+	style:"font-family: 'Trebuchet',serif; font-size: 12px; padding-top: 11px; text-align: center;"
 }
 DIV#top DIV#nav
 {
@@ -62,7 +95,7 @@ DIV#nav UL LI A
 	text-indent: -9999px;
 }
 DIV#language-holder{
-    background: url(/view/images/languages/header-bg1.png) repeat 50%;
+    background: url(../view/images/languages/header-bg1.png) repeat 50%;
     height: auto;
     float: none;
 	width: 818px;
@@ -71,10 +104,24 @@ DIV#language-holder{
     margin-bottom: 40px;
 
 }
-DIV#language-holder#language-image{
 
-
+DIV#language-holder DIV#user{
+    float: left;
+    margin-left: 5px;
 }
+DIV#error{
+	 width: 818px;
+    background-color: #ffff66; 
+    color: blue;
+    margin:auto;
+}
+DIV#footer{
+	 width: 818px;
+    background: url(../view/images/languages/header-bg1.png) repeat 50%;
+    color: blue;
+    margin:auto;
+}
+
 DIV#language-holder IMG{
     height: 30px;
     float: right;
@@ -95,7 +142,7 @@ DIV#video-header
 DIV#header DIV.wrap
 {
 	height: 218px;
-	background: url(/view/images/header-bg1.png) no-repeat 50% 0;
+	background: url(../view/images/header-bg1.png) no-repeat 50% 0;
 }
 DIV#header DIV#slide-holder
 {
@@ -127,7 +174,7 @@ DIV#header DIV#slide-holder DIV#slide-controls
 	height: 46px;
 	display: none;
 	position: absolute;
-	background: url(/view/images/images/slide-bg.png) 0 0;
+	background: url(../view/images/images/slide-bg.png) 0 0;
 }
 DIV#header DIV#slide-holder DIV#slide-controls P.text
 {
@@ -166,9 +213,9 @@ DIV#header DIV#slide-holder DIV#slide-controls P#slide-nav A.on
 }
 DIV#header DIV#slide-holder DIV#slide-controls P#slide-nav A
 {
-	background-image: url(/view/images/images/silde-nav.png);
+	background-image: url(../view/images/images/silde-nav.png);
 }
 DIV#nav UL LI A
 {
-	background: url(/view/images/nav-bg1.png) no-repeat;
+	background: url(../view/images/nav-bg1.png) no-repeat;
 }

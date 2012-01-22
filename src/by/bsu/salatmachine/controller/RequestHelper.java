@@ -11,25 +11,49 @@ import java.util.HashMap;
  * Date: 28.11.11
  * Time: 23:01
  */
-public class RequestHelper {
+public final class RequestHelper {
     private static RequestHelper instance = null;
+    private static final String COMMAND = "command";
+    private static final String LOGIN = "login";
+    private static final String RECEPTST = "receptst";
+    private static final String RECEPT = "recept";
+    private static final String UNLOGIN = "unlogin";
+    private static final String SAVE = "save";
+    private static final String COOK = "cook";
+    private static final String REFRESH = "refresh";
+    private static final String DELETE_REC = "deleteRec";
+    private static final String DELETE_RECEPT_ST = "deleteReceptSt";
+    private static final String NEW_RECEPT = "newRecept";
+    private static final String NEW_RECEPT_ST = "newReceptSt";
+    private static final String MONEY_AMOUNT = "moneyAmount";
+    private static final String VISIBILITY_CHANGE = "visibilityChange";
     HashMap<String, Command> commands =
-            new HashMap<String, Command>();
+            new HashMap<>();
 
     private RequestHelper() {
 //заполнение таблицы командами
-        commands.put("login", new LoginCommand());
-         commands.put("receptst", new ReceptStorageCommand());
-         commands.put("recept", new ReceptCommand());
+        commands.put(LOGIN, new LoginCommand());
+        commands.put(RECEPTST, new ReceptStorageCommand());
+        commands.put(RECEPT, new ReceptCommand());
+        commands.put(UNLOGIN, new UnloginCommand());
+        commands.put(SAVE, new SaveCommand());
+        commands.put(COOK, new CookCommand());
+        commands.put(REFRESH, new RefreshCommand());
+        commands.put(DELETE_REC, new DeleteReceptCommand());
+        commands.put(DELETE_RECEPT_ST, new DeleteReceptStorageCommand());
+        commands.put(NEW_RECEPT, new NewReceptCommand());
+        commands.put(NEW_RECEPT_ST, new NewReceptStCommand());
+        commands.put(MONEY_AMOUNT, new MoneyAmountCommand());
+        commands.put(VISIBILITY_CHANGE, new VisibilityChangeCommand());
     }
 
     public Command getCommand(HttpServletRequest request) {
-//извлечение команды из запроса
-        String action = request.getParameter("command");
-//получение объекта, соответствующего команде
+        //извлечение команды из запроса
+        String action = request.getParameter(COMMAND);
+        //получение объекта, соответствующего команде
         Command command = commands.get(action);
         if (command == null) {
-//если команды не существует в текущем объекте
+            //если команды не существует в текущем объекте
             command = new NoCommand();
         }
         return command;

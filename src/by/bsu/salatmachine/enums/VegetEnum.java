@@ -4,29 +4,27 @@ package by.bsu.salatmachine.enums;
  * @author Stepanov Dmitriy
  */
 public enum VegetEnum {
-    CABBAGE(4, 15, 0.5, "LV"), DILL(4, 7, 0.1, "OV"), MINT(4, 6, 0.1, "PV"), POTATOES(
-            7, 15, 1, "RV"), CARROTS(8, 16, 0.1, "RV"), BEETS(8, 20, 0.2, "RV"), BEANS(
-            7, 14, 1, "BV"), TOMATO(8, 16, 0.1, "PV"), CUCUMBER(8, 16, 0.1,
-            "PV"), ONION(8, 16, 0.1, "LV"), HORSERADISH(8, 16, 0.1, "RV"), GARLIC(
-            8, 16, 0.1, "LV");
-    private final double idealTemperature;// in curtsies
+     TURNIP(100, 12, 0.5, "RV"),CABBAGE(100, 15, 0.5, "LV"), DILL(100, 7, 0.1, "OV"), MINT(100, 6, 0.1, "PV"), POTATOES(
+            200, 15, 1, "RV"), CARROTS(300, 16, 0.1, "RV"), BEETS(300, 20, 0.2, "RV"), BEANS(
+            200, 14, 1, "BV"), TOMATO(300, 16, 0.1, "PV"), CUCUMBER(300, 16, 0.1,
+            "PV"), ONION(300, 16, 0.1, "LV"), HORSERADISH(300, 16, 0.1, "RV"), GARLIC(
+            300, 16, 0.1, "LV");
+    private final double pricePerKG;// in curtsies
     private final double parseWeight;// in kilograms
     private final double parseCalorie;// in calories
     private final String vegetKind;// in two letters example "LV"
 
-    // private final Class<?> vegetKindClass;// in two letters example "LV"
 
-    private VegetEnum(double idealTemperature, double parseWeight,
+    private VegetEnum(double pricePerKG, double parseWeight,
                       double parseCalorie, String vegetKind) {
-        this.idealTemperature = idealTemperature;
+        this.pricePerKG = pricePerKG;
         this.parseCalorie = parseCalorie;
         this.parseWeight = parseWeight;
         this.vegetKind = vegetKind;
-        // this.vegetKindClass = vegetKindClass;
     }
 
-    public double idealTemperature() {
-        return idealTemperature;
+    public double pricePerKG() {
+        return pricePerKG;
     }
 
     public double parseWeight() {
@@ -40,7 +38,5 @@ public enum VegetEnum {
     public String vegetKind() {
         return vegetKind;
     }
-    /*
-      * public Class<?> vegetKindClass() { return vegetKindClass; }
-      */
+
 }

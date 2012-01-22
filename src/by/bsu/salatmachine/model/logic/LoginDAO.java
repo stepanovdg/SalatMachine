@@ -1,10 +1,11 @@
 package by.bsu.salatmachine.model.logic;
 
-import by.bsu.salatmachine.controller.manager.ConfigurationManager;
+import by.bsu.salatmachine.exceptions.DatabaseConnectionException;
+import by.bsu.salatmachine.model.entity.EntityIF;
+import by.bsu.salatmachine.model.entity.NullEntity;
 import by.bsu.salatmachine.model.entity.User;
 import by.bsu.salatmachine.model.pool.ConnectionManager;
 
-import java.rmi.RemoteException;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
@@ -17,133 +18,106 @@ import java.sql.SQLException;
  * Time: 23:15
  */
 public class LoginDAO extends AbstractDAO<User> {
+    private final static String USER_GETENTITY = "SELECT * FROM Vegetdb.user WHERE Login = ? AND Password = ? AND inUse = 1";
+    private final static String USER_REFRESH = "SELECT Password,MoneyAmount,AccountType FROM Vegetdb.user WHERE Login = ?";
+    private final static String USER_STORE = "update VEGETDB.USER set PASSWORD = ?,MONEYAMOUNT = ?,ACCOUNTTYPE = ? where LOGIN = ?";
+    private final static String USER_CREATE = "insert into VEGETDB.USER (LOGIN,PASSWORD,MONEYAMOUNT,ACCOUNTTYPE)values (?, ?, ?, ?)";
+
     @Override
-    public User getEntity(Object... objects) throws RemoteException {
+    public EntityIF getEntity(Object... objects) throws DatabaseConnectionException {
         String login = (String) objects[0];
         String password = (String) objects[1];
-        User user = null;
+        EntityIF retn = new NullEntity();
+
         // проверка логина и пароля
-        try {
-            Connection cn = ConnectionManager.getInstance().getConnection();
-            try (PreparedStatement st = cn.prepareStatement(ConfigurationManager.
-                    getInstance().getProperty("USER_GETENTITY"))) {
+        try (Connection cn = ConnectionManager.getInstance().getConnection()) {
+            try (PreparedStatement st = cn.prepareStatement(USER_GETENTITY)) {
                 st.setString(1, login);
                 st.setString(2, password);
                 try (ResultSet rs = st.executeQuery()) {
                     if (rs.next()) {
-                        user = new User();
+                        User user = new User();
                         user.setLogin(login);
                         user.setPassword(password);
                         user.setMoney(rs.getInt(3));
                         user.setType(rs.getBoolean(4));
+                        retn = user;
                     } else {
-                        throw new RemoteException("Refresh: Registration ("
-                                + login + ") not found");
+                        return retn;
                     }
-                }
-
-
-            } finally {
-
-                try {
-                    cn.close();
-                } catch (Exception ignore) {
                 }
             }
         } catch (SQLException e) {
-            throw new RemoteException(e.getMessage());
+            throw new DatabaseConnectionException(e);
         }
-        return user;
+        return retn;
 
     }
 
     @Override
-    public boolean refresh(User user) throws RemoteException {
+    public boolean refresh(User user) throws DatabaseConnectionException {
         if (user == null) {
-            throw new RemoteException("user cannot be null");
+            return false;
         }
         try (Connection cn = ConnectionManager.getInstance().getConnection()) {
-
-            try (PreparedStatement st = cn.prepareStatement(ConfigurationManager.
-                    getInstance().getProperty("USER_REFRESH"))) {
+            try (PreparedStatement st = cn.prepareStatement(USER_REFRESH)) {
                 st.setString(1, user.getLogin());
-
                 try (ResultSet rs = st.executeQuery()) {
                     if (rs.next()) {
                         user.setPassword(rs.getString(1));
                         user.setMoney(rs.getInt(2));
-                        user.setType(rs.getBoolean(2));
+                        user.setType(rs.getBoolean(3));
                         return true;
                     } else {
                         return false;
                     }
                 }
-
-
-            } finally {
-
-                try {
-                    cn.close();
-                } catch (Exception ignore) {
-                }
             }
         } catch (SQLException e) {
-            throw new RemoteException(e.getMessage());
+            throw new DatabaseConnectionException(e);
         }
     }
 
     @Override
-    public boolean store(User user) throws RemoteException {
+    public boolean delete(User entity) {
+        return false;
+    }
+
+    @Override
+    public boolean store(User user) throws DatabaseConnectionException {
         if (user == null) {
-            throw new RemoteException("user cannot be null");
+            return false;
         }
         try (Connection cn = ConnectionManager.getInstance().getConnection()) {
-
-            try (PreparedStatement st = cn.prepareStatement(ConfigurationManager.
-                    getInstance().getProperty("USER_STORE"))) {
+            try (PreparedStatement st = cn.prepareStatement(USER_STORE)) {
                 st.setString(1, user.getPassword());
                 st.setInt(2, user.getMoney());
                 st.setBoolean(3, user.isType());
+                st.setString(4, user.getLogin());
                 return st.executeUpdate() == 1;
-
-            } finally {
-                try {
-                    cn.close();
-                } catch (Exception ignore) {
-                }
             }
-        } catch (SQLException re) {
-            throw new RemoteException(re.getMessage());
+        } catch (SQLException e) {
+            throw new DatabaseConnectionException(e);
         }
     }
 
 
     @Override
-    public boolean create(User user) throws RemoteException {
+    public boolean create(EntityIF userEnt) throws DatabaseConnectionException {
+        User user = (User) userEnt;
         if (user == null) {
-            throw new RemoteException("user cannot be null");
+            return false;
         }
         try (Connection cn = ConnectionManager.getInstance().getConnection()) {
-
-            try (PreparedStatement st = cn.prepareStatement(ConfigurationManager.
-                    getInstance().getProperty("USER_CREATE"))) {
+            try (PreparedStatement st = cn.prepareStatement(USER_CREATE)) {
                 st.setString(1, user.getLogin());
                 st.setString(2, user.getPassword());
                 st.setInt(3, user.getMoney());
                 st.setBoolean(4, user.isType());
                 return st.executeUpdate() == 1;
-
-            } finally {
-                try {
-                    cn.close();
-                } catch (Exception ignore) {
-                }
             }
-        } catch (SQLException re) {
-            throw new RemoteException(re.getMessage());
+        } catch (SQLException e) {
+            throw new DatabaseConnectionException(e);
         }
-
     }
-
-
 }

@@ -9,6 +9,6 @@ import java.io.Serializable;
  * Time: 13:33
  *
  */
-public abstract class AbstractEntity implements Serializable{
+public abstract class AbstractEntity implements Serializable,EntityIF,Comparable {
 
 }

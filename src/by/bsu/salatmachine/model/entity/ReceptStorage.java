@@ -1,38 +1,51 @@
 package by.bsu.salatmachine.model.entity;
 
-import java.util.HashMap;
-import java.util.Map;
-
 /**
  * Created by IntelliJ IDEA.
  * User: Stepanov Dmitriy
  * Date: 10.12.11
  * Time: 13:07
- *
  */
 public class ReceptStorage extends AbstractEntity {
-    private Map<Integer,String> storage;
+    private Integer idRecept;
 
-
-    public ReceptStorage() {
-        this.storage = new HashMap<>();
+    public ReceptStorage(Integer idRecept, String name, String visibility) {
+        this.setIdRecept(idRecept);
+        this.setName(name);
+        this.setVisibility(visibility);
     }
 
-    public void addRecept(Integer id,String name){
-        this.storage.put(id,name);
-    }
-    public Map<Integer, String> getStorage() {
-        return storage;
+    private String name;
+
+    private String visibility;
+
+    public Integer getIdRecept() {
+        return idRecept;
     }
 
-    public void setStorage(Map<Integer, String> storage) {
-        this.storage = storage;
+    public void setIdRecept(Integer idRecept) {
+        this.idRecept = idRecept;
+    }
+
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public String getVisibility() {
+        return visibility;
+    }
+
+    public void setVisibility(String visibility) {
+        this.visibility = visibility;
     }
 
     @Override
-    public String toString() {
-
-        return storage.toString();
-               //todo
+    public int compareTo(Object o) {
+        return (this.getIdRecept() - ((ReceptStorage) o).getIdRecept());
     }
 }

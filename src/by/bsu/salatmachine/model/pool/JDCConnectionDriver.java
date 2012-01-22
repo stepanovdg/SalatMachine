@@ -8,6 +8,7 @@ package by.bsu.salatmachine.model.pool;
  *
  */
 import by.bsu.salatmachine.controller.manager.ConfigurationManager;
+import by.bsu.salatmachine.exceptions.DatabaseConnectionException;
 
 import java.sql.*;
 import java.util.*;
@@ -27,15 +28,12 @@ public class JDCConnectionDriver implements Driver {
                                InstantiationException, IllegalAccessException,
                                 SQLException
     {
-
-
         DriverManager.registerDriver(this);
-      //  Class.forName(driver).newInstance();
         pool = new JDCConnectionPool(url, user, password);
     }
 
     public Connection connect(String url, Properties props)
-                                       throws SQLException {
+                                       throws DatabaseConnectionException {
         if(!url.startsWith(URL_PREFIX)) {
              return null;
         }
@@ -64,6 +62,7 @@ public class JDCConnectionDriver implements Driver {
 
     @Override
     public Logger getParentLogger() throws SQLFeatureNotSupportedException {
-        return null;  //Todo change body of implemented methods use File | Settings | File Templates.
+        return null;
     }
+
 }

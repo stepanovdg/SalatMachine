@@ -3,6 +3,7 @@
         charset=utf-8" pageEncoding="utf-8" isErrorPage="true" %>
 <!--fmt:bundle basename="${applicationScope.config}"-->
 <fmt:bundle basename="resources.config">
+    <fmt:message key="HEADER.CSS" var="css"/>
     <fmt:message key="HEADER" var="head"/>
     <fmt:message key="FOOTER" var="foot"/>
     <fmt:message key="SERVLET" var="serv"/>
@@ -15,21 +16,21 @@
     <fmt:message key="ERROR.TITLE" var="title"/>
 </fmt:bundle>
 <html>
-<head><title>${title}</title></head>
+<head>
+    <title>${title}</title>
+    <link rel="stylesheet" href="${pageContext.request.contextPath}${css}" type="text/css" media="screen"/>
+</head>
 <body>
 <jsp:include page="${head}"/>
 <h3>${title}</h3>
 <hr/>
+${pageContext.errorData.requestURI}+${pageContext.errorData.servletName}+${pageContext.errorData.statusCode}
+<hr/>
 <jsp:expression>
     (request.getAttribute("errorMessage") != null)
-? (String) request.getAttribute("errorMessage")
-: "unknown error"</jsp:expression>
-<%--
-<jsp:expression>
-    (request.getAttribute(${reqatr}) != null)
-    ? (String) request.getAttribute(${reqatr})
-    : ${unknown}</jsp:expression>
-    --%>
+    ? (String) request.getAttribute("errorMessage")
+    : ${pageContext.errorData.throwable}
+</jsp:expression>
 <hr/>
 <a href="${serv}">${main}</a>
 <jsp:include page="${foot}"/>

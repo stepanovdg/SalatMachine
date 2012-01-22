@@ -7,13 +7,15 @@ package by.bsu.salatmachine.model.pool;
  * Time: 12:46
  *
  */
+import by.bsu.salatmachine.exceptions.DatabaseConnectionException;
+
 import java.sql.*;
 import java.util.*;
 
 class ConnectionReaper extends Thread {
 
     private JDCConnectionPool pool;
-    private final long delay=300000;
+    private final static long DELAY =300000;
 
     ConnectionReaper(JDCConnectionPool pool) {
         this.pool=pool;
@@ -22,8 +24,8 @@ class ConnectionReaper extends Thread {
     public void run() {
         while(true) {
            try {
-              sleep(delay);
-           } catch( InterruptedException e) { }
+              sleep(DELAY);
+           } catch( InterruptedException ignored) { }
            pool.reapConnections();
         }
     }
@@ -31,24 +33,27 @@ class ConnectionReaper extends Thread {
 
 public class JDCConnectionPool {
 
-   private Vector<JDCConnection> connections;
+    private static final String ERROR_MESSAGE_POOL = "All" +
+            " connections available for this resource are in use";
+    private static final String ERROR_MESSAGE_CONNECTION = "Exception in connection to database. Please try later.";
+    private Vector<JDCConnection> connections;
    private String url, user, password;
-   final private long timeout=60000;
+   final private static long TIME_OUT =10000;
    private ConnectionReaper reaper;
-   final private int poolsize=10;
+   final private static int POOL_SIZE =10;
 
    public JDCConnectionPool(String url, String user, String password) {
       this.url = url;
       this.user = user;
       this.password = password;
-      connections = new Vector<JDCConnection>(poolsize);
+      connections = new Vector<>(POOL_SIZE);
       reaper = new ConnectionReaper(this);
       reaper.start();
    }
 
    public synchronized void reapConnections() {
 
-      long stale = System.currentTimeMillis() - timeout;
+      long stale = System.currentTimeMillis() - TIME_OUT;
       Enumeration<JDCConnection> connlist = connections.elements();
 
       while((connlist != null) && (connlist.hasMoreElements())) {
@@ -62,9 +67,7 @@ public class JDCConnectionPool {
    }
 
    public synchronized void closeConnections() {
-
       Enumeration<JDCConnection> connlist = connections.elements();
-
       while((connlist != null) && (connlist.hasMoreElements())) {
           JDCConnection conn = connlist.nextElement();
           removeConnection(conn);
@@ -76,7 +79,7 @@ public class JDCConnectionPool {
    }
 
 
-   public synchronized Connection getConnection() throws SQLException {
+   public synchronized Connection getConnection() throws  DatabaseConnectionException {
 
        JDCConnection c;
        for(int i = 0; i < connections.size(); i++) {
@@ -84,13 +87,19 @@ public class JDCConnectionPool {
            if (c.lease()) {
               return c;
            }else {
-               if(i==poolsize-1){
-                 throw new SQLException("All connections available for this resource are in use");
+               if(i== POOL_SIZE -1){
+                 DatabaseConnectionException e = new DatabaseConnectionException(ERROR_MESSAGE_POOL);
+                 e.setCorrectable(true);
+                 throw e;
                }
            }
        }
-
-       Connection conn = DriverManager.getConnection(url, user, password);
+       Connection conn;
+       try {
+           conn = DriverManager.getConnection(url, user, password);
+       } catch (SQLException e) {
+           throw new DatabaseConnectionException(ERROR_MESSAGE_CONNECTION);
+       }
        c = new JDCConnection(conn, this);
        c.lease();
        connections.addElement(c);

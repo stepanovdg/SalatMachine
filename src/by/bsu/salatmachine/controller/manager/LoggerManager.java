@@ -17,7 +17,7 @@ public class LoggerManager {
     public static final String WARN = "warn";
     public static final String FATAL = "fatal";
     private Logger logger = null;
-    private String configFile = "C:\\Users\\Дмитрий\\Documents\\Java\\Intelig.Idea\\EpamWebProject\\web\\WEB-INF\\classes\\log4j.properties";
+    private String configFile = "C:\\Users\\Dmitriy\\Documents\\Java\\Intelig.Idea\\EpamWebProject\\web\\WEB-INF\\classes\\log4j.properties";
     private String level = null;
 
 

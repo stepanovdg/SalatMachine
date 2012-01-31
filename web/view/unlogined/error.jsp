@@ -29,7 +29,7 @@ ${pageContext.errorData.requestURI}+${pageContext.errorData.servletName}+${pageC
 <jsp:expression>
     (request.getAttribute("errorMessage") != null)
     ? (String) request.getAttribute("errorMessage")
-    : ${pageContext.errorData.throwable}
+    :"Error"
 </jsp:expression>
 <hr/>
 <a href="${serv}">${main}</a>

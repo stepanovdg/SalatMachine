@@ -15,98 +15,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="f663f5a5-2236-4621-b052-f5f37073d521" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/view/images/faded-wood.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Logger.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/by/bsu/salatmachine/controller/manager/LoggerManager.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/by/bsu/salatmachine/controller/tags/NewReceptTableTag.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/by/bsu/salatmachine/controller/tags/PriceTag.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/by/bsu/salatmachine/exceptions/DatabaseConnectionException.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/by/bsu/salatmachine/model/commands/CookCommand.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/by/bsu/salatmachine/model/commands/DeleteReceptCommand.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/by/bsu/salatmachine/model/commands/DeleteReceptStorageCommand.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/by/bsu/salatmachine/model/commands/MoneyAmountCommand.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/by/bsu/salatmachine/model/commands/NewReceptCommand.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/by/bsu/salatmachine/model/commands/NewReceptStCommand.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/by/bsu/salatmachine/model/commands/RefreshCommand.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/by/bsu/salatmachine/model/commands/SaveCommand.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/by/bsu/salatmachine/model/commands/UnloginCommand.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/by/bsu/salatmachine/model/commands/VisibilityChangeCommand.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/by/bsu/salatmachine/model/entity/EntityIF.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/by/bsu/salatmachine/model/entity/NullEntity.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/by/bsu/salatmachine/model/entity/TreeSetOfEntity.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/by/bsu/salatmachine/model/entity/Vegetable.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/by/bsu/salatmachine/model/logic/VegetableDAO.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/css/greyscale.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/css/menu.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/js/menu.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/view/logined/amount.jsp" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/view/logined/cook.jsp" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/view/secure/visibilityChange.jsp" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/view/static/error-panel.jsp" />
-      <change type="DELETED" beforePath="C:\Users\Дмитрий\Documents\Java\Intelig.Idea\EpamWebProject\lib\javax.ejb.jar" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\Дмитрий\Documents\Java\Intelig.Idea\EpamWebProject\lib\javax.jms.jar" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\Дмитрий\Documents\Java\Intelig.Idea\EpamWebProject\lib\javax.persistence.jar" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\Дмитрий\Documents\Java\Intelig.Idea\EpamWebProject\lib\javax.resource.jar" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\Дмитрий\Documents\Java\Intelig.Idea\EpamWebProject\lib\javax.transaction.jar" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\Дмитрий\Documents\Java\Intelig.Idea\EpamWebProject\src\by\bsu\salatmachine\controller\filters\DemoCharServlet.java" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\Дмитрий\Documents\Java\Intelig.Idea\EpamWebProject\src\by\bsu\salatmachine\enums\QualityEnum.java" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\Дмитрий\Documents\Java\Intelig.Idea\EpamWebProject\src\by\bsu\salatmachine\model\entity\CookingAction.java" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\Дмитрий\Documents\Java\Intelig.Idea\EpamWebProject\src\by\bsu\salatmachine\model\entity\VegetStorage.java" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\Дмитрий\Documents\Java\Intelig.Idea\EpamWebProject\web\META-INF\context.xml" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\Дмитрий\Documents\Java\Intelig.Idea\EpamWebProject\web\WEB-INF\application.xml" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\Дмитрий\Documents\Java\Intelig.Idea\EpamWebProject\web\WEB-INF\oldWeb.txt" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\Дмитрий\Documents\Java\Intelig.Idea\EpamWebProject\web\css\style.css" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\Дмитрий\Documents\Java\Intelig.Idea\EpamWebProject\web\view\static\header1.jsp" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/view/images/languages/header-bg1.png" afterPath="$PROJECT_DIR$/web/view/images/languages/header-bg1.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/artifacts/SalatMachine_war_exploded.xml" afterPath="$PROJECT_DIR$/.idea/artifacts/SalatMachine_war_exploded.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/misc.xml" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
+      <change type="DELETED" beforePath="C:\Users\Dmitriy\Documents\Java\Intelig.Idea\EpamWebProject\.idea\libraries\Java_EE_6.xml" afterPath="" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/libraries/Logger.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Logger.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/SalatMachine.iml" afterPath="$PROJECT_DIR$/SalatMachine.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/by/bsu/salatmachine/controller/ControllerServlet.java" afterPath="$PROJECT_DIR$/src/by/bsu/salatmachine/controller/ControllerServlet.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/by/bsu/salatmachine/controller/RequestHelper.java" afterPath="$PROJECT_DIR$/src/by/bsu/salatmachine/controller/RequestHelper.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/by/bsu/salatmachine/controller/filters/EncodingFilter.java" afterPath="$PROJECT_DIR$/src/by/bsu/salatmachine/controller/filters/EncodingFilter.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/by/bsu/salatmachine/controller/filters/SecurityFilter.java" afterPath="$PROJECT_DIR$/src/by/bsu/salatmachine/controller/filters/SecurityFilter.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/by/bsu/salatmachine/controller/manager/ConfigurationManager.java" afterPath="$PROJECT_DIR$/src/by/bsu/salatmachine/controller/manager/ConfigurationManager.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/by/bsu/salatmachine/controller/manager/MessageManager.java" afterPath="$PROJECT_DIR$/src/by/bsu/salatmachine/controller/manager/MessageManager.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/by/bsu/salatmachine/controller/tags/LoggerTag.java" afterPath="$PROJECT_DIR$/src/by/bsu/salatmachine/controller/tags/LoggerTag.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/by/bsu/salatmachine/enums/Role.java" afterPath="$PROJECT_DIR$/src/by/bsu/salatmachine/enums/Role.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/by/bsu/salatmachine/enums/VegetEnum.java" afterPath="$PROJECT_DIR$/src/by/bsu/salatmachine/enums/VegetEnum.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/by/bsu/salatmachine/enums/VegetMethodOfPreparationEnum.java" afterPath="$PROJECT_DIR$/src/by/bsu/salatmachine/enums/VegetMethodOfPreparationEnum.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/by/bsu/salatmachine/model/commands/LoginCommand.java" afterPath="$PROJECT_DIR$/src/by/bsu/salatmachine/model/commands/LoginCommand.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/by/bsu/salatmachine/model/commands/NoCommand.java" afterPath="$PROJECT_DIR$/src/by/bsu/salatmachine/model/commands/NoCommand.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/by/bsu/salatmachine/model/commands/ReceptCommand.java" afterPath="$PROJECT_DIR$/src/by/bsu/salatmachine/model/commands/ReceptCommand.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/by/bsu/salatmachine/model/commands/ReceptStorageCommand.java" afterPath="$PROJECT_DIR$/src/by/bsu/salatmachine/model/commands/ReceptStorageCommand.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/by/bsu/salatmachine/model/entity/AbstractEntity.java" afterPath="$PROJECT_DIR$/src/by/bsu/salatmachine/model/entity/AbstractEntity.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/by/bsu/salatmachine/model/entity/Recept.java" afterPath="$PROJECT_DIR$/src/by/bsu/salatmachine/model/entity/Recept.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/by/bsu/salatmachine/model/entity/ReceptStorage.java" afterPath="$PROJECT_DIR$/src/by/bsu/salatmachine/model/entity/ReceptStorage.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/by/bsu/salatmachine/model/entity/User.java" afterPath="$PROJECT_DIR$/src/by/bsu/salatmachine/model/entity/User.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/by/bsu/salatmachine/model/logic/AbstractDAO.java" afterPath="$PROJECT_DIR$/src/by/bsu/salatmachine/model/logic/AbstractDAO.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/by/bsu/salatmachine/model/logic/LoginDAO.java" afterPath="$PROJECT_DIR$/src/by/bsu/salatmachine/model/logic/LoginDAO.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/by/bsu/salatmachine/model/logic/ManagerDAO.java" afterPath="$PROJECT_DIR$/src/by/bsu/salatmachine/model/logic/ManagerDAO.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/by/bsu/salatmachine/model/logic/ReceptDAO.java" afterPath="$PROJECT_DIR$/src/by/bsu/salatmachine/model/logic/ReceptDAO.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/by/bsu/salatmachine/model/logic/ReceptStorageDAO.java" afterPath="$PROJECT_DIR$/src/by/bsu/salatmachine/model/logic/ReceptStorageDAO.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/by/bsu/salatmachine/model/pool/ConnectionManager.java" afterPath="$PROJECT_DIR$/src/by/bsu/salatmachine/model/pool/ConnectionManager.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/by/bsu/salatmachine/model/pool/JDCConnection.java" afterPath="$PROJECT_DIR$/src/by/bsu/salatmachine/model/pool/JDCConnection.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/by/bsu/salatmachine/model/pool/JDCConnectionDriver.java" afterPath="$PROJECT_DIR$/src/by/bsu/salatmachine/model/pool/JDCConnectionDriver.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/by/bsu/salatmachine/model/pool/JDCConnectionPool.java" afterPath="$PROJECT_DIR$/src/by/bsu/salatmachine/model/pool/JDCConnectionPool.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/resources/config.properties" afterPath="$PROJECT_DIR$/src/resources/config.properties" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/resources/messages.properties" afterPath="$PROJECT_DIR$/src/resources/messages.properties" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/resources/messages_de_DE.properties" afterPath="$PROJECT_DIR$/src/resources/messages_de_DE.properties" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/resources/messages_ru_RU.properties" afterPath="$PROJECT_DIR$/src/resources/messages_ru_RU.properties" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/WEB-INF/tld/loggertag.tld" afterPath="$PROJECT_DIR$/web/WEB-INF/tld/loggertag.tld" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/WEB-INF/web.xml" afterPath="$PROJECT_DIR$/web/WEB-INF/web.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/css/style1.css" afterPath="$PROJECT_DIR$/web/css/style1.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/index.jsp" afterPath="$PROJECT_DIR$/web/index.jsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/view/logined/main.jsp" afterPath="$PROJECT_DIR$/web/view/logined/main.jsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/view/logined/recept.jsp" afterPath="$PROJECT_DIR$/web/view/logined/recept.jsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/view/logined/receptStorage.jsp" afterPath="$PROJECT_DIR$/web/view/logined/receptStorage.jsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/view/secure/admin.jsp" afterPath="$PROJECT_DIR$/web/view/secure/admin.jsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/view/static/footer.jsp" afterPath="$PROJECT_DIR$/web/view/static/footer.jsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/view/static/header.jsp" afterPath="$PROJECT_DIR$/web/view/static/header.jsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/view/static/locale-header.jsp" afterPath="$PROJECT_DIR$/web/view/static/locale-header.jsp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/by/bsu/salatmachine/controller/manager/LoggerManager.java" afterPath="$PROJECT_DIR$/src/by/bsu/salatmachine/controller/manager/LoggerManager.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/view/unlogined/error.jsp" afterPath="$PROJECT_DIR$/web/view/unlogined/error.jsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/view/unlogined/login.jsp" afterPath="$PROJECT_DIR$/web/view/unlogined/login.jsp" />
     </list>
     <ignored path="SalatMachine.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -174,42 +87,6 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="LoggerManager.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/by/bsu/salatmachine/controller/manager/LoggerManager.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="10" column="13" selection-start="191" selection-end="191" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="ConfigurationManager.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/by/bsu/salatmachine/controller/manager/ConfigurationManager.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="11" column="19" selection-start="223" selection-end="223" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="SecurityFilter.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/by/bsu/salatmachine/controller/filters/SecurityFilter.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="28" column="0" selection-start="1160" selection-end="1160" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="EncodingFilter.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/by/bsu/salatmachine/controller/filters/EncodingFilter.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="27" column="39" selection-start="1027" selection-end="1027" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="ConnectionManager.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/by/bsu/salatmachine/model/pool/ConnectionManager.java">
           <provider selected="true" editor-type-id="text-editor">
@@ -249,16 +126,50 @@
       <file leaf-file-name="amount.jsp" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/web/view/logined/amount.jsp">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="-0.0">
+            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="LoginCommand.java" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="LoginCommand.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/by/bsu/salatmachine/model/commands/LoginCommand.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="101" column="9" selection-start="4181" selection-end="4181" vertical-scroll-proportion="5.7984495">
+            <state line="76" column="0" selection-start="3439" selection-end="3439" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ControllerServlet.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/by/bsu/salatmachine/controller/ControllerServlet.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="48" column="0" selection-start="1763" selection-end="1763" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="error.jsp" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/web/view/unlogined/error.jsp">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="31" column="11" selection-start="1258" selection-end="1258" vertical-scroll-proportion="1.4978355">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="header-bg1.png" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/web/view/images/header-bg1.png">
+          <provider selected="true" editor-type-id="images">
+            <state />
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="LoggerManager.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/by/bsu/salatmachine/controller/manager/LoggerManager.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="22" column="56" selection-start="697" selection-end="697" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -282,17 +193,15 @@
     <option name="LINE_SEPARATORS_CONVERSION" value="NONE" />
   </component>
   <component name="HighlightingSettingsPerFile">
-    <setting file="file://$PROJECT_DIR$/web/view/static/header.jsp" root0="FORCE_HIGHLIGHTING" root1="FORCE_HIGHLIGHTING" root2="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/src/by/bsu/salatmachine/controller/ControllerServlet.java" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/src/by/bsu/salatmachine/model/logic/LoginDAO.java" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/web/view/static/header.jsp" root0="FORCE_HIGHLIGHTING" root1="FORCE_HIGHLIGHTING" root2="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/src/by/bsu/salatmachine/model/commands/ReceptStorageCommand.java" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/web/css/style1.css" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/src/by/bsu/salatmachine/model/commands/NoCommand.java" />
-        <option value="$PROJECT_DIR$/src/by/bsu/salatmachine/model/commands/NewReceptStCommand.java" />
         <option value="$PROJECT_DIR$/src/by/bsu/salatmachine/model/commands/NewReceptCommand.java" />
         <option value="$PROJECT_DIR$/src/by/bsu/salatmachine/model/commands/MoneyAmountCommand.java" />
         <option value="$PROJECT_DIR$/src/by/bsu/salatmachine/model/commands/DeleteReceptStorageCommand.java" />
@@ -307,6 +216,8 @@
         <option value="$PROJECT_DIR$/src/by/bsu/salatmachine/controller/filters/EncodingFilter.java" />
         <option value="$PROJECT_DIR$/src/by/bsu/salatmachine/model/pool/ConnectionManager.java" />
         <option value="$PROJECT_DIR$/src/by/bsu/salatmachine/model/commands/LoginCommand.java" />
+        <option value="$PROJECT_DIR$/src/by/bsu/salatmachine/controller/manager/LoggerManager.java" />
+        <option value="$PROJECT_DIR$/web/view/unlogined/error.jsp" />
       </list>
     </option>
   </component>
@@ -371,74 +282,6 @@
       <sortByType />
     </navigator>
     <panes>
-      <pane id="PackagesPane">
-        <subPane>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="SalatMachine" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="SalatMachine" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageViewModuleNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="SalatMachine" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="SalatMachine" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageViewModuleNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="by.bsu.salatmachine" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageElementNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="model" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageElementNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="SalatMachine" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="SalatMachine" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageViewModuleNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="by.bsu.salatmachine" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageElementNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="model" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageElementNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="entity" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageElementNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="SalatMachine" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="SalatMachine" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageViewModuleNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="by.bsu.salatmachine" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageElementNode" />
-            </PATH_ELEMENT>
-          </PATH>
-        </subPane>
-      </pane>
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -953,19 +796,87 @@
           </PATH>
         </subPane>
       </pane>
-      <pane id="Scope" />
       <pane id="Favorites" />
+      <pane id="Scope" />
+      <pane id="PackagesPane">
+        <subPane>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="SalatMachine" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="SalatMachine" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageViewModuleNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="SalatMachine" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="SalatMachine" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageViewModuleNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="by.bsu.salatmachine" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageElementNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="model" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageElementNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="SalatMachine" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="SalatMachine" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageViewModuleNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="by.bsu.salatmachine" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageElementNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="model" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageElementNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="entity" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageElementNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="SalatMachine" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="SalatMachine" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageViewModuleNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="by.bsu.salatmachine" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageElementNode" />
+            </PATH_ELEMENT>
+          </PATH>
+        </subPane>
+      </pane>
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="project.structure.last.edited" value="Libraries" />
+    <property name="project.structure.last.edited" value="Global Libraries" />
     <property name="JdbcConsole.Extract.Separator" value=";" />
-    <property name="OverrideImplement.combined" value="true" />
     <property name="project.structure.proportion" value="0.15" />
+    <property name="OverrideImplement.combined" value="true" />
     <property name="options.splitter.main.proportions" value="0.3" />
     <property name="JdbcConsole.Connection.Autocommit" value="true" />
-    <property name="MemberChooser.sorted" value="false" />
     <property name="recentsLimit" value="5" />
+    <property name="MemberChooser.sorted" value="false" />
     <property name="JdbcConsole.ResultInNewTab" value="true" />
     <property name="Database.TableEditor.Splitter" value="0.9" />
     <property name="GoToClass.toSaveIncludeLibraries" value="false" />
@@ -982,12 +893,12 @@
     <property name="project.structure.side.proportion" value="0.33680555" />
     <property name="JdbcConsole.Extract.ClosingQuote" value="'" />
     <property name="MemberChooser.copyJavadoc" value="false" />
-    <property name="JdbcConsole.EnableParameterPattern" value="false" />
     <property name="JdbcConsole.Extract.IncludeHeader" value="false" />
+    <property name="JdbcConsole.EnableParameterPattern" value="false" />
     <property name="JdbcConsole.ParameterPattern" value="(\?\d*|\:\w+|\@\w+|\$\{[^$\{\}]*\}|\$\w+\$|\#\w+\#)" />
     <property name="JdbcConsole.ResultPageSize" value="1000" />
-    <property name="dynamic.classpath" value="false" />
     <property name="options.searchVisible" value="true" />
+    <property name="dynamic.classpath" value="false" />
   </component>
   <component name="RecentsManager">
     <key name="CopyClassDialog.RECENTS_KEY">
@@ -1016,6 +927,42 @@
       <method>
         <option name="AntTarget" enabled="false" />
         <option name="BuildArtifacts" enabled="false" />
+        <option name="Maven.BeforeRunTask" enabled="false" />
+        <option name="PhingTarget" enabled="false" />
+      </method>
+    </configuration>
+    <configuration default="true" type="#com.intellij.j2ee.web.tomcat.TomcatRunConfigurationFactory" factoryName="Remote">
+      <option name="LOCAL" value="false" />
+      <server-settings>
+        <option name="DEPLOY_TOMCAT_APPS" value="false" />
+        <option name="BASE_DIRECTORY_NAME" value="Tomcat_7_SalatMachine" />
+      </server-settings>
+      <predefined_log_file id="TOMCAT_LOCALHOST_LOG_ID" enabled="true" />
+      <extension name="coverage" />
+      <RunnerSettings RunnerId="Debug">
+        <option name="DEBUG_PORT" value="11629" />
+        <option name="TRANSPORT" value="0" />
+        <option name="LOCAL" value="false" />
+      </RunnerSettings>
+      <RunnerSettings RunnerId="Run" />
+      <ConfigurationWrapper RunnerId="Debug" />
+      <ConfigurationWrapper RunnerId="Run" />
+      <method>
+        <option name="AntTarget" enabled="false" />
+        <option name="BuildArtifacts" enabled="false" />
+        <option name="Make" enabled="true" />
+        <option name="Maven.BeforeRunTask" enabled="false" />
+        <option name="PhingTarget" enabled="false" />
+      </method>
+    </configuration>
+    <configuration default="true" type="com.intellij.persistence.run.ConsoleRunConfigurationType" factoryName="Query Language Console">
+      <option name="VM_PARAMETERS" value="" />
+      <option name="USER_CFG_CLASS" />
+      <option name="CONTEXT_PROVIDER" />
+      <method>
+        <option name="AntTarget" enabled="false" />
+        <option name="BuildArtifacts" enabled="false" />
+        <option name="Make" enabled="true" />
         <option name="Maven.BeforeRunTask" enabled="false" />
         <option name="PhingTarget" enabled="false" />
       </method>
@@ -1065,42 +1012,6 @@
           <option name="PROGRAM_PARAMETERS" value="" />
         </SHUTDOWN>
       </ConfigurationWrapper>
-      <method>
-        <option name="AntTarget" enabled="false" />
-        <option name="BuildArtifacts" enabled="false" />
-        <option name="Make" enabled="true" />
-        <option name="Maven.BeforeRunTask" enabled="false" />
-        <option name="PhingTarget" enabled="false" />
-      </method>
-    </configuration>
-    <configuration default="true" type="com.intellij.persistence.run.ConsoleRunConfigurationType" factoryName="Query Language Console">
-      <option name="VM_PARAMETERS" value="" />
-      <option name="USER_CFG_CLASS" />
-      <option name="CONTEXT_PROVIDER" />
-      <method>
-        <option name="AntTarget" enabled="false" />
-        <option name="BuildArtifacts" enabled="false" />
-        <option name="Make" enabled="true" />
-        <option name="Maven.BeforeRunTask" enabled="false" />
-        <option name="PhingTarget" enabled="false" />
-      </method>
-    </configuration>
-    <configuration default="true" type="#com.intellij.j2ee.web.tomcat.TomcatRunConfigurationFactory" factoryName="Remote">
-      <option name="LOCAL" value="false" />
-      <server-settings>
-        <option name="DEPLOY_TOMCAT_APPS" value="false" />
-        <option name="BASE_DIRECTORY_NAME" value="Tomcat_7_SalatMachine" />
-      </server-settings>
-      <predefined_log_file id="TOMCAT_LOCALHOST_LOG_ID" enabled="true" />
-      <extension name="coverage" />
-      <RunnerSettings RunnerId="Debug">
-        <option name="DEBUG_PORT" value="11629" />
-        <option name="TRANSPORT" value="0" />
-        <option name="LOCAL" value="false" />
-      </RunnerSettings>
-      <RunnerSettings RunnerId="Run" />
-      <ConfigurationWrapper RunnerId="Debug" />
-      <ConfigurationWrapper RunnerId="Run" />
       <method>
         <option name="AntTarget" enabled="false" />
         <option name="BuildArtifacts" enabled="false" />
@@ -1227,11 +1138,11 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="0" width="1366" height="738" extended-state="0" />
+    <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
     <editor active="false" />
     <layout>
       <window_info id="Data Sources" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.28951368" sideWeight="0.5153153" order="8" side_tool="false" content_ui="tabs" />
-      <window_info id="Changes" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.48381603" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Changes" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.4822335" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Phing Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3292683" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.24924012" sideWeight="0.5045045" order="3" side_tool="false" content_ui="tabs" />
@@ -1239,14 +1150,15 @@
       <window_info id="IDEtalk Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
       <window_info id="IDEtalk" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32252252" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3181049" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32367972" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Web" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.23784195" sideWeight="0.12603648" order="4" side_tool="true" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.30569106" sideWeight="0.21441442" order="1" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3292683" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3195122" sideWeight="0.5153153" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Dependency Viewer" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32972974" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.28230768" sideWeight="0.516184" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.70187396" sideWeight="0.0" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.28267476" sideWeight="0.5177665" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.70050764" sideWeight="0.0" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Documentation" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="FLOATING" visible="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" x="46" y="113" width="1182" height="554" />
       <window_info id="JavaEE:App" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32902735" sideWeight="0.33167496" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Persistence" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="true" content_ui="tabs" />
@@ -1255,7 +1167,6 @@
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3253833" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32027256" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
@@ -1369,27 +1280,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/by/bsu/salatmachine/controller/RequestHelper.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="46" column="38" selection-start="1978" selection-end="1978" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/by/bsu/salatmachine/controller/ControllerServlet.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="24" column="0" selection-start="722" selection-end="722" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/by/bsu/salatmachine/controller/tags/PriceTag.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="34" column="83" selection-start="962" selection-end="962" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/by/bsu/salatmachine/controller/tags/NewReceptTableTag.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="40" column="107" selection-start="1818" selection-end="1818" vertical-scroll-proportion="0.0">
@@ -1407,13 +1297,6 @@
     <entry file="file://$PROJECT_DIR$/src/by/bsu/salatmachine/controller/manager/MessageManager.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="12" column="19" selection-start="226" selection-end="226" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/by/bsu/salatmachine/controller/manager/LoggerManager.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="10" column="13" selection-start="191" selection-end="191" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
@@ -1474,9 +1357,35 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/web/view/images/header-bg1.png">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/by/bsu/salatmachine/model/commands/LoginCommand.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="101" column="9" selection-start="4181" selection-end="4181" vertical-scroll-proportion="5.7984495">
+        <state line="76" column="0" selection-start="3439" selection-end="3439" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/by/bsu/salatmachine/controller/ControllerServlet.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="48" column="0" selection-start="1763" selection-end="1763" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/by/bsu/salatmachine/controller/manager/LoggerManager.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="22" column="56" selection-start="697" selection-end="697" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/view/unlogined/error.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="31" column="11" selection-start="1258" selection-end="1258" vertical-scroll-proportion="1.4978355">
           <folding />
         </state>
       </provider>
@@ -1536,12 +1445,11 @@
       </state>
       <state key="ModuleStructureConfigurable.UI">
         <settings>
-          <last-edited>SalatMachine</last-edited>
+          <last-edited>Web|SalatMachine</last-edited>
           <splitter-proportions>
             <option name="proportions">
               <list>
                 <option value="0.33680555" />
-                <option value="0.5" />
               </list>
             </option>
           </splitter-proportions>

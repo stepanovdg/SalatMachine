@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?><component name="dataSourceStorage">
+  <data-source source="LOCAL" name="Data Source" product="MySQL" version="5.5.11" jdbc-version="4.0" driver-version="mysql-connector-java-5.1.16 ( Revision: ${bzr.revision-id} )" uuid="0b3b5327-779e-4028-8d3b-b1c820eee1b6">
+    <extra-name-characters>#@</extra-name-characters>
+    <identifier-quote-string>`</identifier-quote-string>
+    <jdbc-driver>com.mysql.jdbc.Driver</jdbc-driver>
+    <jdbc-url>jdbc:mysql://localhost:3306/</jdbc-url>
+    <user-name>root</user-name>
+    <user-password>dfd8dfc5dfc5dfde</user-password>
+    <schema-pattern>VEGETDB.*</schema-pattern>
+    <default-schemas>VEGETDB.*</default-schemas>
+    <table-pattern>VegetDB</table-pattern>
+    <default-dialect>MySQL</default-dialect>
+    <driver-properties>
+      <property name="DBNAME" value="vegetdb" />
+    </driver-properties>
+    <libraries>
+      <library>
+        <url>jar://C:/MySQL Datafiles/mysql-connector-java-5.1.16-bin.jar!/</url>
+      </library>
+      <library>
+        <url>file://C:/MySQL Datafiles/mysql-connector-license.txt</url>
+      </library>
+    </libraries>
+  </data-source>
+</component>

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<eclipse-userlibraries>
+  <library name="Java EE 6">
+    <archive path="C:/Users/Дмитрий/Documents/Java/Intelig.Idea/EpamWebProject/lib/javax.ejb.jar" />
+    <archive path="C:/Users/Дмитрий/Documents/Java/Intelig.Idea/EpamWebProject/lib/javax.jms.jar" />
+    <archive path="C:/Users/Дмитрий/Documents/Java/Intelig.Idea/EpamWebProject/lib/javax.persistence.jar" />
+    <archive path="C:/Users/Дмитрий/Documents/Java/Intelig.Idea/EpamWebProject/lib/javax.transaction.jar" />
+    <archive path="C:/Users/Дмитрий/Documents/Java/Intelig.Idea/EpamWebProject/lib/javax.resource.jar" />
+  </library>
+</eclipse-userlibraries>
+
